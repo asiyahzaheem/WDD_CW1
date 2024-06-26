@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
 * {
     padding: 0;
     margin: 0;
@@ -5,24 +7,60 @@
 }
 
 body {
-    font-family: Helvetica, sans-serif;
-    padding: 2.4rem;
-    background-color: #bbe9ec;
-
-}
-
-h1 {
-    font-size: 4.8rem;
-    text-align: center;
-}
-
-.homepage {
-    width: 100%;
+    font-family: "Poppins", sans-serif;
+    color: #222;
+    background: radial-gradient(circle, rgba(9,157,185,1) 0%, rgba(164,209,215,1) 50%, rgba(255,191,120,1) 100%);
+    width: 100vw;
     height: 100vh;
-    background: url('src/animations/waves.gif') no-repeat center bottom;
-    background-size: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+main {
+    max-width: 1180px;
+    /* margin: 0 auto; */
+/*     padding: 2.4rem 0; */
 }
-@keyframes fading {
+
+.title {
+    font-size: 6.4rem;
+    text-align: center;
+    margin-bottom: 1.2rem;
+}
+
+.mission {
+    font-size: 2rem;
+    line-height: 1.4;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 3.2rem;
+}
+
+.team {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.team_member {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: center;
+
+}
+
+.team_member img {
+    width: 60%;
+    border-radius: 50%;
+}
+
+.team_member span {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+/* @keyframes fading {
     0% { opacity: 1; }
     100% { opacity: 0; }
 }
@@ -35,4 +73,4 @@ h1 {
     position: fixed;
     top: 0;
     right: 0;
-}
+} */
