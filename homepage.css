@@ -28,6 +28,10 @@ header{
   z-index: 1;
 }
 
+nav{
+  width: auto;
+}
+
 nav ul {
   list-style: none;
   padding: 0;
@@ -77,4 +81,9 @@ main{
 
 h1 {
   text-align: center;
+    font-size: 120px;
+    font-weight: bold;
+    background: url('src/images/ocean.jpeg') repeat; /* Replace 'image.jpg' with your image URL */
+    -webkit-background-clip: text; /* Clip the background to the text */
+    color: transparent; /* Hide the text */
 }
