@@ -62,14 +62,15 @@ FONT SIZE SYSTEM (px)
 }
 
 html {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-size: 62.5%;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    font-size: 62.5% !important;
 }
 
 body {
-    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    background-color: var(--white);
 }
 
 main {
