@@ -89,9 +89,18 @@ ion-icon[name="cart-outline"] {
     /* background-color: var(--teal-0); */
 }
 
+.product-img {
+    overflow: hidden;
+}
 .product-img img {
     max-width: 100%;
     border-radius: 5px;
+}
+
+.product-img img:hover {
+    transition: 0.3s;
+    transform: scale(1.2);
+    
 }
 
 .product-content {
@@ -128,6 +137,9 @@ ion-icon[name="cart-outline"] {
 }
 
 
+.product:hover {
+    cursor: pointer;
+}
 .product .btn {
     border-radius: 2.2rem;
     padding: 0.8rem 2rem;
@@ -143,17 +155,31 @@ ion-icon[name="cart-outline"] {
 }
 
 .product-modal {
-    display: none;
+    /* display: none; */
+    display: block;
     width: 70rem;
     height: 40rem;
-    position: absolute;
+    position: absolute; 
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    box-shadow: 0 4px 8px 0 #00000033, 0 6px 20px 0 #00000030;
     background-color: var(--white);
     border: 2px solid var(--black-1);
     border-radius: 12px;
     z-index: 999;
+
+    padding: 3.2rem;
+}
+.product-modal.show {
+    /* relative ot viewport */
+    display: block;
+    
+}
+
+.product-modal.show body {
+    background: black;
 }
 footer {
     width: 100%;
