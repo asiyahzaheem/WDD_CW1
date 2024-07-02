@@ -1,0 +1,52 @@
+{
+    "products" : [ {
+        "title": "Whale T-Shirt",
+        "price": 390,
+        "options": ["UK 6", "White"],
+        "image": "product_1.jpeg"
+    },
+    {
+        "title": "Beach Hat",
+        "price": 2938,
+        "options": ["Large", "Black"],
+        "image": "product_2.jpeg"
+    },
+    {
+        "title": "Dolphin T-Shirt",
+        "price": 390,
+        "options": ["UK 6", "White"],
+        "image": "product_3.jpeg"
+    },
+    {
+        "title": "Beach Hat",
+        "price": 2938,
+        "options": ["Large", "Black"],
+        "image": "product_4.jpeg"
+    },
+    {
+        "title": "Whale T-Shirt",
+        "price": 390,
+        "options": ["UK 6", "White"],
+        "image": "product_5.jpeg"
+    },
+    {
+        "title": "Beach Hat",
+        "price": 2938,
+        "options": ["Large", "Black"],
+        "image": "product_6.jpeg"
+    },
+    {
+        "title": "Whale T-Shirt",
+        "price": 390,
+        "options": ["UK 6", "White"],
+        "image": "product_1.jpeg"
+    },
+    {
+        "title": "Beach Hat",
+        "price": 2938,
+        "options": ["Large", "Black"],
+        "image": "product_6.jpeg"
+    }
+
+]
+}

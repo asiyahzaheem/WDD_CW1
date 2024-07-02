@@ -200,7 +200,7 @@ ion-icon[name="cart-outline"] {
     font-weight: 400;
 }
 
-.product .btn:hover, .btn-cart:hover {
+.product .btn:hover, .btn-cart:hover, .product-btn .btn:hover {
     transition: 0.3s;
     color: var(--white);
     background-color: var(--darkTeal-1);
@@ -208,8 +208,8 @@ ion-icon[name="cart-outline"] {
 }
 
 .product-modal {
-    /* display: none; */
-    display: flex;
+    display: none;
+    /* display: flex; */
     gap: 2.4rem;
     /* display: block; */
     width: 80rem;
@@ -229,6 +229,7 @@ ion-icon[name="cart-outline"] {
     padding: 3.2rem;
 }
 .product-modal.show {
+    display: flex;
     /* relative ot viewport */
     /* display: block; */
 }
@@ -246,6 +247,7 @@ ion-icon[name="cart-outline"] {
 .modal-content {
     display: flex;
     flex-direction: column;
+    max-width: 50%;
 }
 
 .modal-content .product-title{
@@ -256,11 +258,67 @@ ion-icon[name="cart-outline"] {
 .modal-content .product-price {
     font-size: var(--text-l);
 }
+
 .modal-content .product-desc {
     font-size: var(--text-s);
     color: var(--black-1);
     margin-bottom: 0.8rem;
+}
+
+.modal-content span {
+    display: block;
+    font-size: var(--text-s);
+    font-weight: 500;
+    margin-bottom: 0.8rem;
+}
+
+.modal-content .options {
+    display: flex;
+    gap: 1.2rem;
+}
+
+.options div {
+    width: 12%;
+    height: 2rem;
+    border: 1px solid #333;
+    content: "";
+    text-align: center;
+    font-size: var(--text-s);
+}
+
+hr {
+    margin: 1.4rem 0;
+}
+.product-color #red {
+    background-color: rgb(214, 50, 50);
+}
+
+.product-color #blue {
+    background-color: rgb(48, 48, 182);
+}
+
+.product-color #white {
+    background-color: white;
+}
+
+.product-color #black {
+    background-color: black;
+}
+
+.product-size .options {
+    margin-bottom: 1.2rem;
+}
+
+.product-modal .btn {
+    border-radius: 2.2rem;
+    padding: 0.8rem 4.8rem;
+    font-size: 1.4rem;
+    font-weight: 400;
     
+}
+
+.blur {
+    filter: blur(8px);
 }
 footer {
     width: 100%;
