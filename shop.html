@@ -7,7 +7,46 @@
     <link rel="stylesheet" href="src/css/style.css" type="text/css"/>
     <link rel="stylesheet" href="src/css/shop.css" type="text/css"/>
 </head>
+
 <body>
+    <div class="product-modal" id="product-modal">
+        <div class="modal-image">
+            <img src="src/images/product_1.jpeg" alt="Product 1"/>
+        </div>
+        <div class="modal-content">
+            <p class="product-title">Whale T-Shirt</p>
+            <p class="product-desc">obcaecati, iure eligendi amet rerum officiis nemo facilis quidem laudantium ipsum, adipisci atque reiciendis asperiores delectus quibusdam! Esse tempora vitae repudiandae.</p>
+            <p class="product-price">$ 390</p>
+            <hr>
+
+            <div class="product-color">
+                <span>Choose a Color </span>
+                <div class="options">
+                    <div id="red"></div>
+                    <div id="blue"></div>
+                    <div id="white"></div>
+                    <div id="black"></div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="product-size">
+                <span>Choose a Size </span>
+                <div class="options">
+                    <div id="uk-6">6</div>
+                    <div id="uk-8">8</div>
+                    <div id="uk-10">10</div>
+                    <div id="uk-12">12</div>
+                </div>
+            </div>
+
+            <div class="product-btn">
+                <button class="btn" type="button">Add to Cart</button>
+            </div>
+        </div>
+        
+    </div>
     <!-- <header>
         <nav>Navigation bar</nav>
     </header> -->
@@ -21,23 +60,9 @@
             <li><a href="#feedback">Feedback</a></li>
           </ul>
         </nav>
-      </header>
+    </header>
+
     <main>
-        <button>div</button>
-        <div class="product-modal show" id="product-modal">
-            <div class="modal-image">
-                <img src="src/images/product_1.jpeg" alt="Product 1"/>
-            </div>
-            <div class="modal-content">
-                <p class="product-title">Whale T-Shirt</p>
-                <p class="product-desc">Soft cotton t-shirt with whale illsutration</p>
-                <p class="product-price">$ 390</p>
-                <div class="product-btn">
-                    <button class="btn" type="button">Add to Cart</button>
-                </div>
-            </div>
-            
-        </div>
         <div class="container">
             <div class="shop-header">
                 <div class="row">
@@ -54,135 +79,8 @@
                     </div>
                 </div>
             </div>
-            <div class="products">
-
-                <div class="product" >
-                    <div class="product-img" id="product">
-                        <img src="src/images/product_1.jpeg" alt="Product 1"/>
-                    </div>
-                    <div class="product-content">
-                        <div class="main">
-                            <span class="product-title">Whale T-Shirt</span>
-                            <span class="product-price">$ 390</span>
-                        </div>
-                        <span class="product-options">UK 6, White</span>
-                        <div class="product-btn">
-                            <button class="btn" type="button">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product">
-                    <div class="product-img">
-                        <img src="src/images/product_3.png" alt="Product 2"/>
-                    </div>
-                    <div class="product-content">
-                        <div class="main">
-                            <span class="product-title">Beach Tote</span>
-                            <span class="product-price">$ 49</span>
-                        </div>
-                        <span class="product-options">Rich Cotton, Cream</span>
-                        <div class="product-btn">
-                            <button class="btn" type="button">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product">
-                    <div class="product-img">
-                        <img src="src/images/product_2.png" alt="Product 1"/>
-                    </div>
-                    <div class="product-content">
-                        <div class="main">
-                            <span class="product-title">Dolphin T-Shirt</span>
-                            <span class="product-price">$ 400</span>
-                        </div>
-                        <span class="product-options">UK 8, White</span>
-                        <div class="product-btn">
-                            <button class="btn" type="button">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product">
-                    <div class="product-img">
-                        <img src="src/images/product_4.jpg" alt="Product 1"/>
-                    </div>
-                    <div class="product-content">
-                        <div class="main">
-                            <span class="product-title">Beach Tote</span>
-                            <span class="product-price">$ 52</span>
-                        </div>
-                        <span class="product-options">Rich Cotton, Brown</span>
-                        <div class="product-btn">
-                            <button class="btn" type="button">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product">
-                    <div class="product-img">
-                        <img src="src/images/product_5.jpg" alt="Product 1"/>
-                    </div>
-                    <div class="product-content">
-                        <div class="main">
-                            <span class="product-title">Beach Hat</span>
-                            <span class="product-price">$ 80</span>
-                        </div>
-                        <span class="product-options">Small, Blue</span>
-                        <div class="product-btn">
-                            <button class="btn" type="button">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product">
-                    <div class="product-img">
-                        <img src="src/images/product_6.jpeg" alt="Product 1"/>
-                    </div>
-                    <div class="product-content">
-                        <div class="main">
-                            <span class="product-title">Beach Hat</span>
-                            <span class="product-price">$ 2938</span>
-                        </div>
-                        <span class="product-options">Large, Black</span>
-                        <div class="product-btn">
-                            <button class="btn" type="button">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product">
-                    <div class="product-img">
-                        <img src="src/images/product_1.jpeg" alt="Product 1"/>
-                    </div>
-                    <div class="product-content">
-                        <div class="main">
-                            <span class="product-title">T-Shirt</span>
-                            <span class="product-price">$ 230</span>
-                        </div>
-                        <span class="product-options">UK 5, White</span>
-                        <div class="product-btn">
-                            <button class="btn" type="button">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product">
-                    <div class="product-img">
-                        <img src="src/images/product_2.png" alt="Product 1"/>
-                    </div>
-                    <div class="product-content">
-                        <div class="main">
-                            <span class="product-title">T-Shirt</span>
-                            <span class="product-price">$ 139</span>
-                        </div>
-                        <span class="product-options">UK 6, White</span>
-                        <div class="product-btn">
-                            <button class="btn" type="button">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
+            <div id="product">div</div>
+            <div class="products" id="products">
             </div>
         </div>
     </main>
