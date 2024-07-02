@@ -229,11 +229,26 @@ ion-icon[name="cart-outline"] {
     padding: 3.2rem;
 }
 .product-modal.show {
+    /* display: none; */
     display: flex;
     /* relative ot viewport */
     /* display: block; */
 }
 
+.product-modal .close-btn {
+    background: none;
+    border: none;
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    z-index: 9999;
+    cursor: pointer;
+}
+
+.product-modal .close-btn:hover {
+    transition: 0.3s;
+    color: var(--black-0);
+}
 .modal-image {
     max-width: 50%;
     display: flex;
@@ -277,24 +292,33 @@ ion-icon[name="cart-outline"] {
     gap: 1.2rem;
 }
 
-.options div {
+.options button {
+    display: block;
     width: 12%;
     height: 2rem;
     border: 1px solid #333;
     content: "";
     text-align: center;
     font-size: var(--text-s);
+    cursor: pointer;
+}
+
+.options button:hover {
+    transition: 0.3s;
+    /* border-width: 1.5px ; */
+    box-shadow: 0 4px 8px 0 #00000033;
+
 }
 
 hr {
     margin: 1.4rem 0;
 }
 .product-color #red {
-    background-color: rgb(214, 50, 50);
+    background-color: rgb(211, 88, 88);
 }
 
 .product-color #blue {
-    background-color: rgb(48, 48, 182);
+    background-color: rgb(76, 76, 176);
 }
 
 .product-color #white {

@@ -1,4 +1,3 @@
-const productEl = document.getElementById('product')
 const productsEl = document.getElementById('products')
 const mainEl = document.getElementsByTagName('main')[0];
 const productModalEl = document.getElementById('product-modal')
@@ -23,8 +22,8 @@ fetchJSONData().then((productsData) => {
         const data = productsData["products"];
         data.forEach(product => {
             const productHTML = `
-            <div class="product" id="product">
-                    <div class="product-img">
+            <div class="product">
+                    <div class="product-img" id="product">
                         <img src="src/images/${product.image}" alt="Product 1"/>
                     </div>
                     <div class="product-content">
@@ -39,16 +38,23 @@ fetchJSONData().then((productsData) => {
                     </div>
                 </div>
             `
-
             productsEl.innerHTML += productHTML;
-            
-        });
+        })
+        const productEl = document.getElementById('product');
+        const closeBtn = document.getElementById('close-btn');
+        
+        productEl.addEventListener("click", function() {
+            console.log("proudct click")
+            productModalEl.classList.add("show");
+            mainEl.classList.add("blur");
+        })
+        
+        closeBtn.addEventListener("click", function() {
+            productModalEl.classList.remove("show");
+            mainEl.classList.remove("blur");
+        })
+    ;
     }
 });
 
 
-productEl.addEventListener("click", function() {
-    productModalEl.classList.toggle("show");
-    mainEl.classList.toggle("blur");
-    
-})
