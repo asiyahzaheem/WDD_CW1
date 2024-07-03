@@ -76,6 +76,7 @@ header {
 
 .container {
     padding: 4.8rem 0;
+    display: none;
 }
 
 .shop-header {
