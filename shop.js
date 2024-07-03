@@ -31,7 +31,7 @@ fetchJSONData().then((productsData) => {
                             <span class="product-title">${product.title}</span>
                             <span class="product-price">$ ${product.price}</span>
                         </div>
-                        <span class="product-options">UK 6, White</span>
+                        <span class="product-options">${product.options.sizes[0]}, ${product.options.colors[0]}</span>
                         <div class="product-btn">
                             <button class="btn" type="button">Add to Cart</button>
                         </div>

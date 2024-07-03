@@ -1,52 +1,83 @@
 {
     "products" : [ {
         "title": "Whale T-Shirt",
-        "price": 390,
-        "options": ["UK 6", "White"],
+        "price": 49,
+        "options": {
+            "colors": ["White", "Red", "Blue", "Black"],
+            "sizes" : ["UK 6", "UK 7", "UK 9", "UK 12"]
+        },
+        "description": "Rich 100% cotton comfy t-shirt with whale illustration.",
         "image": "product_1.jpeg"
     },
     {
-        "title": "Beach Hat",
-        "price": 2938,
-        "options": ["Large", "Black"],
-        "image": "product_2.jpeg"
-    },
-    {
-        "title": "Dolphin T-Shirt",
-        "price": 390,
-        "options": ["UK 6", "White"],
-        "image": "product_3.jpeg"
-    },
-    {
-        "title": "Beach Hat",
-        "price": 2938,
-        "options": ["Large", "Black"],
+        "title": "Beach Tote Bag",
+        "price": 25,
+        "options": {
+            "colors": ["White", "Beige"],
+            "sizes" : ["Small", "Large"]
+        },
+        "description": "Rich 100% cotton tote bag suitable for the beach, with ocean-related illustrations",
         "image": "product_4.jpeg"
-    },
+    }, 
     {
-        "title": "Whale T-Shirt",
-        "price": 390,
-        "options": ["UK 6", "White"],
+        "title": "Beach Bucket Hat",
+        "price": 65,
+        "options": {
+            "colors": ["White", "Black"],
+            "sizes" : ["Small", "Medium", "Large"]
+        },
+        "description": "Bucket hat designed for warm weather - 100% pure cotton",
         "image": "product_5.jpeg"
+    }, 
+    {
+        "title": "Whale Sweatpants",
+        "price": 80,
+        "options": {
+            "colors": ["White", "Blue", "Black"],
+            "sizes" : ["UK 8", "UK 10"]
+        },
+        "description": "Rich 100% cotton comfy sweatpants with whale illustration and drawsrings",
+        "image": "product_7.jpeg"
     },
     {
-        "title": "Beach Hat",
-        "price": 2938,
-        "options": ["Large", "Black"],
-        "image": "product_6.jpeg"
+        "title": "Jute Tote Bag",
+        "price": 100,
+        "options": {
+            "colors": ["Beige", "Black"],
+            "sizes" : ["Small", "Large"]
+        },
+        "description": "Our original, best-selling beach bag. Made from eco-friendly materials. ",
+        "image": "product_2.jpeg"
+    }, 
+    {
+        "title": "Aqua T-Shirt",
+        "price": 89,
+        "options": {
+            "colors": ["Pink", "White", "Black"],
+            "sizes" : ["UK 6", "UK 9", "UK 12"]
+        },
+        "description": "Rich 100% cotton comfy t-shirt with ocean-related illustrations.",
+        "image": "product_8.jpeg"
     },
     {
-        "title": "Whale T-Shirt",
-        "price": 390,
-        "options": ["UK 6", "White"],
-        "image": "product_1.jpeg"
-    },
+        "title": "Starfish Beach Hat",
+        "price": 60,
+        "options": {
+            "colors": ["Black", "White"],
+            "sizes" : ["Large"]
+        },
+        "description": "Comfy cotton hat suitable for the beach, with a starfish patch",
+        "image": "product_9.jpeg"
+    }, 
     {
-        "title": "Beach Hat",
-        "price": 2938,
-        "options": ["Large", "Black"],
-        "image": "product_6.jpeg"
+        "title": "Go fish! Tote Bag",
+        "price": 12003,
+        "options": {
+            "colors": ["White", "Green", "Blue", "Cream"],
+            "sizes" : ["Medium", "Large"]
+        },
+        "description": "Best selling tote bag, made from pure cotton and polyester. Handy for all things.",
+        "image": "product_3.jpeg"
     }
-
 ]
 }
