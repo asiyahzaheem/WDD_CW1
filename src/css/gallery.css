@@ -2,7 +2,6 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 /*----------Body----------*/
@@ -51,7 +50,7 @@ nav a {
     font-size: 1.25em;
     font-weight: 600;
     text-decoration: none;
-    border-radius: 8px;
+    border-radius: 22px;
     padding: 15px;
 }
 
