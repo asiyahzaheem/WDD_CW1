@@ -1,5 +1,6 @@
 {
     "products" : [ {
+        "id": 1,
         "title": "Whale T-Shirt",
         "price": 49,
         "options": {
@@ -10,6 +11,7 @@
         "image": "product_1.jpeg"
     },
     {
+        "id": 2,
         "title": "Beach Tote Bag",
         "price": 25,
         "options": {
@@ -20,6 +22,7 @@
         "image": "product_4.jpeg"
     }, 
     {
+        "id": 3,
         "title": "Beach Bucket Hat",
         "price": 65,
         "options": {
@@ -30,6 +33,7 @@
         "image": "product_5.jpeg"
     }, 
     {
+        "id": 4,
         "title": "Whale Sweatpants",
         "price": 80,
         "options": {
@@ -40,6 +44,7 @@
         "image": "product_7.jpeg"
     },
     {
+        "id": 5,
         "title": "Jute Tote Bag",
         "price": 100,
         "options": {
@@ -50,6 +55,7 @@
         "image": "product_2.jpeg"
     }, 
     {
+        "id": 6,
         "title": "Aqua T-Shirt",
         "price": 89,
         "options": {
@@ -60,6 +66,7 @@
         "image": "product_8.jpeg"
     },
     {
+        "id": 7,
         "title": "Starfish Beach Hat",
         "price": 60,
         "options": {
@@ -70,6 +77,7 @@
         "image": "product_9.jpeg"
     }, 
     {
+        "id": 8,
         "title": "Go fish! Tote Bag",
         "price": 12003,
         "options": {

@@ -13,47 +13,7 @@
 </head>
 
 <body>
-    <div class="product-modal" id="product-modal">
-        <button class="close-btn" id="close-btn">
-            <ion-icon name="close-outline" size="large"></ion-icon>
-        </button>
-        <div class="modal-image">
-            <img src="src/images/product_1.jpeg" alt="Product 1"/>
-        </div>
-        <div class="modal-content">
-            <p class="product-title">Whale T-Shirt</p>
-            <p class="product-desc">obcaecati, iure eligendi amet rerum officiis nemo facilis quidem laudantium ipsum, adipisci atque reiciendis asperiores delectus quibusdam! Esse tempora vitae repudiandae.</p>
-            <p class="product-price">$ 390</p>
-            <hr>
-
-            <div class="product-color">
-                <span>Choose a Color </span>
-                <div class="options">
-                    <button id="red"></button>
-                    <button id="blue"></button>
-                    <button id="white"></button>
-                    <button id="black"></button>
-                </div>
-            </div>
-
-            <hr>
-
-            <div class="product-size">
-                <span>Choose a Size </span>
-                <div class="options">
-                    <button id="uk-6">6</button>
-                    <button id="uk-8">8</button>
-                    <button id="uk-10">10</button>
-                    <button id="uk-12">12</button>
-                </div>
-            </div>
-
-            <div class="product-btn">
-                <button class="btn" type="button">Add to Cart</button>
-            </div>
-        </div>
-        
-    </div>
+    
     <!-- <header>
         <nav>Navigation bar</nav>
     </header> -->
@@ -70,7 +30,7 @@
     </header>
 
     <main>
-        <div class="container">
+        <div class="container" >
             <div class="shop-header">
                 <div class="row">
                     <h1>Shop</h1>
@@ -96,6 +56,25 @@
     </footer>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+    <div class="product-modal" id="product-modal">
+        <div class="product-modal-content" id="product-modal-content">
+            <button class="close-btn" id="close-btn">
+                <ion-icon name="close-outline" size="large"></ion-icon>
+            </button>
+        </div>
+    </div>
+   
     <script src="shop.js"></script>
 </body>
 </html>
+
+<!-- 
+
+<div id="close-btn">
+                    <button class="close-btn">
+                        <ion-icon name="close-outline" size="large"></ion-icon>
+                    </button>
+                </div>
+                
+                -->
