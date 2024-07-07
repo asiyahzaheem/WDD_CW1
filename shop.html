@@ -34,7 +34,7 @@
             <div class="shop-header">
                 <div class="row">
                     <h1>Shop</h1>
-                    <button class="btn btn-cart">
+                    <button class="btn btn-cart" id="btn-cart" onclick="openCartModal()">
                         <ion-icon name="cart-outline" size="large"></ion-icon>
                     </button>
                 </div>
@@ -64,17 +64,80 @@
             </button>
         </div>
     </div>
+
+    <div class="cart-modal" id="cart-modal">
+        <div class="cart-modal-content" id="cart-modal-content">
+            <div class="cart-header">
+                <span>Shopping Cart</span>
+                <button class="close-btn " id="cart-close-btn">
+                    <ion-icon name="close-outline" size="large"></ion-icon>
+                </button>
+            </div>
+            <hr>
+            <div class="cart-items" id="cart-items">
+                <!-- <div class="cart-item">
+                    <div class="image">
+                        <img src="src/images/product_1.jpeg" alt="Product 1" />
+                    </div>
+                    <div class="content">
+                        <div class="row">
+                            <span class="title">Whale T-Shirt</span>
+                            <span class="price">$ 399</span>
+                        </div>
+
+                        <div class="row">
+                            <span class="options">Blue, UK-6</span>
+                            <input type="number" value="1" max="10" min="1"/>
+                            <button class="deleteFromCartBtn btn">
+                                <ion-icon name="trash-outline" size="small"></ion-icon>
+                            </button> 
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-item">
+                    <div class="image">
+                        <img src="src/images/product_1.jpeg" alt="Product 1" />
+                    </div>
+                    <div class="content">
+                        <div class="row">
+                            <span class="title">Whale T-Shirt</span>
+                            <span class="price">$ 399</span>
+                        </div>
+
+                        <div class="row">
+                            <span class="options">Blue, UK-6</span>
+                            <input type="number" value="1" max="10" min="1"/>
+                            <button class="deleteFromCartBtn btn">
+                                <ion-icon name="trash-outline" size="small"></ion-icon>
+                            </button> 
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+            <hr>
+            <div class="cart-footer" id="cartFooter">
+                    <div class="subtotal">
+                        <p>Subtotal</p>
+                        <span class="money" id="cartSubtotal">$0</span>
+                    </div>
+                    <div class="shipping">
+                        <p>Shipping</p>
+                        <span class="money" id="cartShipping">$0</span>
+                    </div>
+                    <div class="total">
+                        <p>Total</p>
+                        <span class="money" id="cartTotal">$0</span>
+                    </div>
+                    <div class="footer-btn">
+                        <button class="checkoutBtn btn" id="checkoutBtn">
+                            Checkout
+                        </button>
+                    </div>
+                    
+            </div>
+        </div>
+    </div>
    
     <script src="shop.js"></script>
 </body>
 </html>
-
-<!-- 
-
-<div id="close-btn">
-                    <button class="close-btn">
-                        <ion-icon name="close-outline" size="large"></ion-icon>
-                    </button>
-                </div>
-                
-                -->
