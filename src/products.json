@@ -5,7 +5,7 @@
         "price": 49,
         "options": {
             "colors": ["White", "Red", "Blue", "Black"],
-            "sizes" : ["UK 6", "UK 7", "UK 9", "UK 12"]
+            "sizes" : ["UK-6", "UK-7", "UK-9", "UK-12"]
         },
         "description": "Rich 100% cotton comfy t-shirt with whale illustration.",
         "image": "product_1.jpeg"
@@ -38,7 +38,7 @@
         "price": 80,
         "options": {
             "colors": ["White", "Blue", "Black"],
-            "sizes" : ["UK 8", "UK 10"]
+            "sizes" : ["UK-8", "UK-10"]
         },
         "description": "Rich 100% cotton comfy sweatpants with whale illustration and drawsrings",
         "image": "product_7.jpeg"
@@ -60,7 +60,7 @@
         "price": 89,
         "options": {
             "colors": ["Pink", "White", "Black"],
-            "sizes" : ["UK 6", "UK 9", "UK 12"]
+            "sizes" : ["UK-6", "UK-9", "UK-12"]
         },
         "description": "Rich 100% cotton comfy t-shirt with ocean-related illustrations.",
         "image": "product_8.jpeg"
@@ -81,7 +81,7 @@
         "title": "Go fish! Tote Bag",
         "price": 12003,
         "options": {
-            "colors": ["White", "Green", "Blue", "Cream"],
+            "colors": ["White", "Green", "Blue", "Beige"],
             "sizes" : ["Medium", "Large"]
         },
         "description": "Best selling tote bag, made from pure cotton and polyester. Handy for all things.",

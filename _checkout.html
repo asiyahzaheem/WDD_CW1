@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/style.css" type="text/css"/>
+    <link rel="stylesheet" href="src/css/_checkout.css" type="text/css"/>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <title>Checkout | Life Below Water</title>
+</head>
+
+<body>
+    <div class="container">
+        <main>
+            <div class="checkout-header">
+                <h1>Checkout</h1>
+            </div>
+            <div class="checkout-grid">
+                <div class="checkout-details">
+                   <form class="checkout-form" id="checkoutForm">
+                        <fieldset>
+                            <legend>
+                                Personal details
+                            </legend>
+                            <div class="form-row">
+                                <div class="form-cell half-width">
+                                    <label for="first_name">First Name</label>
+                                    <input type="text" id="first_name" name="first_name" required>
+                                </div>
+                                <div class="form-cell half-width">
+                                    <label for="last_name">Last Name</label>
+                                    <input type="text" id="last_name" name="last_name" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-cell">
+                                    <label for="company_name">Company Name</label>
+                                    <input type="text" id="company_name" name="company_name">
+                                </div>
+                            </div>
+
+                        </fieldset>
+                        <fieldset>
+                            <legend>
+                                Contact Information
+                            </legend>
+                            
+                            <div class="form-row">
+                                <div class="form-cell half-width">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                <div class="form-cell half-width">
+                                    <label for="phone">Phone</label>
+                                    <input type="tel" id="phone" name="phone" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-cell">
+
+                                    <label for="address">Address Line 1</label>
+                                        <input type="text" id="address" name="address" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-cell half-width">
+                                    <label for="city">City</label>
+                                    <input type="text" id="city" name="city" required>
+                                </div>
+                                <div class="form-cell half-width">
+                                    <label for="country">Country</label>
+                                    <input type="tel" id="country" name="country" required>
+                                </div>
+                            </div>
+
+                        </fieldset>
+                        <fieldset>
+                            <legend>
+                                Billing details
+                            </legend>
+
+                            <div class="form-row">
+                                <div class="form-cell">
+                                    <label for="shipping_method">Shipping Method</label>
+                                    <select id="shipping_method" name="shipping_method">
+                                        <option value="standard">Standard Shipping</option>
+                                        <option value="express">Express Shipping</option>
+                                        <option value="pickup">Local Pickup</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-cell">
+                                    <label for="order_notes">Order Notes</label>
+                                        <textarea rows="4" id="order_notes" name="order_notes"></textarea>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+
+                <div class="cart-details">
+                    <div class="cart-items" id="cart-items">
+                    </div>
+                </div>
+
+                <div class="order-summary">
+                    <div class="amount">
+                        <p>Subtotal</p>
+                        <span class="subtotal">$0</span>
+                    </div>
+                    <div class="amount">
+                        <p>Shipping (5%)</p>
+                        <span class="shipping">$0</span>
+                    </div>
+                    <div class="amount">
+                        <p>Total</p>
+                        <span class="total">$0</span>
+                    </div>
+                    <button type="submit" form="checkoutForm" class="btn checkoutSubmitBtn" >Proceed to Payment....</button>
+                </div>
+            </div>
+
+        </main>
+    </div>
+    
+    <script>
+        const cartItemsEl = document.getElementById("cart-items")
+        function fetchLocalStorage() {
+            const LSdata = JSON.parse(localStorage.getItem("cart")) || cart
+            // console.log(LSdata)
+            return LSdata
+        }
+
+        window.onload = () => {
+            const cart = fetchLocalStorage();
+            cartItemsEl.innerHTML = ""
+            console.log(cart)
+            cart.products.forEach(productData => {
+                const cartItemHTML = `
+            <div class="cart-item" data-id=${productData.id}>
+                <div class="image">
+                    <img src="src/images/${productData.image}" alt="Product 1" />
+                    <span class="item-qty">${productData.qty}</span>
+                </div>
+                <div class="content">
+                    <div class="row">
+                        <span class="title">${productData.title}</span>
+                        <span class="price">$ ${productData.price}</span>
+                    </div>
+
+                    <div class="row">
+                        <div class="product-options">
+                            <span class="size-opt">${productData.size}</span>
+                            <span> | </span>
+                            <span class="color-opt">${productData.color}</span>
+                         </div>
+                    </div>
+                </div>
+            </div>
+            `
+
+            cartItemsEl.innerHTML += cartItemHTML;
+            })
+
+            document.querySelector(".subtotal").textContent = `$${cart.totalPrice}`;
+            document.querySelector(".shipping").textContent = `$${cart.shippingFee}`;
+            document.querySelector(".total").textContent = `$${(cart.totalPrice + cart.shippingFee)}`;
+
+        }
+    </script>
+</body>
+</html>

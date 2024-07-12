@@ -94,3 +94,32 @@ main {
     top: 0;
     right: 0;
 } */
+
+/*  LOADER  */
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.gear {
+    width: 150px;
+    height: 100px;
+    animation: rotate 4s linear infinite;
+}
+
+.gear img {
+    width: 100%;
+    height: 100%;
+    /* filter: invert(47%) sepia(95%) saturate(494%) hue-rotate(353deg) brightness(96%) contrast(98%); */
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
