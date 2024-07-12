@@ -1,4 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"); */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
 
 /* Remove all default margins */
 * {
@@ -15,7 +17,7 @@ html {
 
 body {
   background-color: #f5f5f5;
-  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-family: "Nunito", Arial, Helvetica, sans-serif;
   position: relative;
 }
 
@@ -36,7 +38,7 @@ main h1 {
 }
 
 main p{
-    font-family: "lucida console", "Courier New", Courier, monospace;
+    font-family: "Nunito", Arial, Helvetica, sans-serif;
     font-size: 1.3em;
     line-height: 1.25em;
 }
