@@ -17,6 +17,15 @@ PARAGRAPH FONTS
 'lucida console', 'Courier New', Courier, monospace
 */
 
+/* Color Theme Swatches in Hex */
+.color-1 { color: #1D5959; }
+.color-2 { color: #58A69E; }
+.color-3 { color: #378C74; }
+.color-4 { color: #F2D5C4; }
+.color-5 { color: #F25922; }
+
+
+
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 

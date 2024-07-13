@@ -2,7 +2,7 @@
     "products" : [ {
         "id": 1,
         "title": "Whale T-Shirt",
-        "price": 49,
+        "price": 50,
         "options": {
             "colors": ["White", "Red", "Blue", "Black"],
             "sizes" : ["UK-6", "UK-7", "UK-9", "UK-12"]
@@ -13,7 +13,7 @@
     {
         "id": 2,
         "title": "Beach Tote Bag",
-        "price": 25,
+        "price": 45,
         "options": {
             "colors": ["White", "Beige"],
             "sizes" : ["Small", "Large"]
@@ -57,7 +57,7 @@
     {
         "id": 6,
         "title": "Aqua T-Shirt",
-        "price": 89,
+        "price": 85,
         "options": {
             "colors": ["Pink", "White", "Black"],
             "sizes" : ["UK-6", "UK-9", "UK-12"]
@@ -79,7 +79,7 @@
     {
         "id": 8,
         "title": "Go fish! Tote Bag",
-        "price": 12003,
+        "price": 80,
         "options": {
             "colors": ["White", "Green", "Blue", "Beige"],
             "sizes" : ["Medium", "Large"]
