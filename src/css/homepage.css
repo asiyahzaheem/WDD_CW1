@@ -47,7 +47,8 @@ main p{
 .s_cont_margin {
   margin-left: auto;
   margin-right: auto;
-  width: 90%;
+  width: 
+  90%;
 }
 
 /* Background Colors for section */
@@ -171,14 +172,15 @@ main p{
 /* --------Section 4-------- */
 .s4_circle_holder{
   display: flex;
-  justify-content: space-around;
-  overflow-x: hidden;
-  gap: 4em;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 100px;
+  padding: 20px;
+  justify-content: space-between;
 }
 .s4_circles{
-  border-radius: 50%;
-  height: 10em;
-  width:  10em;
-  background-color: #1c1c1c;
-  flex-shrink: 0;
+  min-width: 250px;
+  min-height: 400px;
+  background-color: #1c1c1c; /* Adjust color as needed */
+  flex: 0 0 auto;
 }
