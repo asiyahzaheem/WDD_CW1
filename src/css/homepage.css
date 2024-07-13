@@ -61,20 +61,23 @@ main p{
 
 /*--------Section 1--------*/
 
-.carousel{
+/*carousel div*/
+.carousel{ 
   position: relative;
   height: 80vh;
   overflow: hidden;
 }
 
+/*carousel item properties*/
 .carousel_item{
   height: 100%;
   width: 100%;
   display: none;
   opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;/*Transition effect when changing states*/
 }
 
+/*carousel selected item properties*/
 .carousel_item_selected{
   display: block;
   opacity: 1;
@@ -84,7 +87,7 @@ main p{
 .carousel_nav{
   width: 100%;
   padding: 20px 0;
-  position: absolute;
+  position: absolute;/*Absolute position relative to the carousel div*/
   bottom: 0;
   left: 0;
   text-align: center;
@@ -131,7 +134,7 @@ main p{
 .s1_content {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-50%);/*Because absolute positioning works from the edges the div is not centered so we make it so the top of the div is -50% of its original size*/
   display: flex;
   flex-direction: column;
   justify-content: center;
