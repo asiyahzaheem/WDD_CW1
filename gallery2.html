@@ -2,8 +2,9 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="src/css/gallery.css" />
+        <link rel="stylesheet" href="src/css/gallery2.css" />
         <link rel="stylesheet" href="src/css/nav.css" />
         <title>Gallery</title>
     </head>
@@ -13,7 +14,7 @@
             <nav>
                 <ul>
                     <li><a href="home.html">Home</a></li>
-                    <li><a href="gallery.html" class="active">Gallery</a></li>
+                    <li><a href="gallery2.html" class="active">Gallery</a></li>
                     <li><a href="shop.html">Shop</a></li>
                     <li><a href="team.html">Team</a></li>
                     <li><a href="feedback.html">Feedback</a></li>
@@ -25,35 +26,53 @@
         <!-- Main -->
         <main>
             <div class="container">
-                <h2 class="gallery_title">Gallery</h2>
-                <div class="grid">
-                    <div class="photo">
-                        <img src="src/images/gallery/img1.jpg" alt="image 1">
+                <div class="slide">
+                    <div class="item" style="background-image: url(./src/images/gallery/img1.jpg);">
+                        <div class="content">
+                            <div class="name">Switzerland</div>
+                            <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
+                        </div>
                     </div>
-                    <div class="photo">
-                        <img src="src/images/gallery/img2.jpg" alt="image 2">
+                    <div class="item" style="background-image: url(./src/images/gallery/img2.jpg);">
+                        <div class="content">
+                            <div class="name">Ocean</div>
+                            <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
+                        </div>
                     </div>
-                    <div class="photo">
-                        <img src="src/images/gallery/img3.jpg" alt="image 3">
+                    <div class="item" style="background-image: url(./src/images/gallery/img3.jpg);">
+                        <div class="content">
+                            <div class="name">Iceland</div>
+                            <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
+                        </div>
                     </div>
-                    <div class="photo">
-                        <img src="src/images/gallery/img4.jpg" alt="image 4">
+                    <div class="item" style="background-image: url(./src/images/gallery/img4.jpg);">
+                        <div class="content">
+                            <div class="name">Australia</div>
+                            <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
+                        </div>
                     </div>
-                    <div class="photo">
-                        <img src="src/images/gallery/img5.jpg" alt="image 5">
+                    <div class="item" style="background-image: url(./src/images/gallery/img5.jpg);">
+                        <div class="content">
+                            <div class="name">Netherland</div>
+                            <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
+                        </div>
                     </div>
-                    <div class="photo">
-                        <img src="src/images/gallery/img6.png" alt="image 6">
+                    <div class="item" style="background-image: url(./src/images/gallery/img6.png);">
+                        <div class="content">
+                            <div class="name">Ireland</div>
+                            <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
+                        </div>
                     </div>
-                    <div class="photo">
-                        <img src="src/images/gallery/img7.png" alt="image 6">
-                    </div>
+                </div>
+                <div class="button">
+                    <button class="prev"><</button>
+                    <button class="next">></button>
                 </div>
             </div>
         </main>
 
         <!-- Footer -->
-        <footer>
-        </footer>
+        <footer></footer>
+        <script src="src/js/gallery.js"></script>
     </body>
 </html>
