@@ -3,42 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/style.css">
     <link rel="stylesheet" href="src/css/splash.css">
 
     <title>Life below Water</title>
 </head>
 <body id="body">
     <main id="splashScreen">
+        <div class="splash-screen">
+            <div class="content">
+                <p class="title">Save The Reefs</p>
+                <p class="mission">We need a world where oceans and forests are protected and are allowed to flourish. We need a new story to emerge, one that places the entire Earth’s ability to thrive above the greed of a few.</p>
 
-        <!-- <div class="loader-container">
-            <div class="gear">
-                <img src="src/images/logo.png" alt="an illustration of a gear" />
+                <div class="team">
+                    <div class="team_member">
+                        <img src="src/images/team_member_1.jpeg" alt="Team member"/>
+                        <span>Asiyah</span>
+                    </div>
+                    <div class="team_member">
+                        <img src="src/images/team_member_1.jpeg" alt="Team member"/>
+                        <span>Limesh</span>
+                    </div>
+                    <div class="team_member">
+                        <img src="src/images/team_member_1.jpeg" alt="Team member"/>
+                        <span>Shan</span>
+                    </div>
+                    <div class="team_member">
+                        <img src="src/images/team_member_1.jpeg" alt="Team member"/>
+                        <span>Venuja</span>
+                    </div>
+                </div>
             </div>
-        </div> -->
-
-        <!-- <h1 class="title">Life below Water</h1>
-        <p class="mission">We need a world where oceans and forests are protected and are allowed to flourish. We need a new story to emerge, one that places the entire Earth’s ability to thrive above the greed of a few.</p>
-        <div class="team">
-            <div class="team_member">
-                <img src="src/images/team_member_1.jpeg" alt="Team member"/>
-                <span>Johnny Depp</span>
+            <div class="splash-footer">
+                <p>Group Coursework – Website Design and Development</p>
+                <p>Copyright. All rights reserved.</p>
             </div>
-            <div class="team_member">
-                <img src="src/images/team_member_1.jpeg" alt="Team member"/>
-                <span>Johnny Depp</span>
-            </div>
-            <div class="team_member">
-                <img src="src/images/team_member_1.jpeg" alt="Team member"/>
-                <span>Johnny Depp</span>
-            </div>
-            <div class="team_member">
-                <img src="src/images/team_member_1.jpeg" alt="Team member"/>
-                <span>Johnny Depp</span>
-            </div>
-
         </div>
-        <a href="home.html">Home</a> -->
+        <div class="spacer layer1"></div>
+        
+        
+
+        
+        <a href="home.html">Home</a> 
+
     </main>
-    <script src="splash.js" ></script>
+
+    <div class="loader-container">
+        <div class="gear">
+            <img src="src/images/logo.png" alt="an illustration of a gear" />
+        </div>
+    </div>
+    <script>
+
+
+        setTimeout(function() {
+            var splash = document.getElementById('splashScreen');
+            splash.style.transition = 'opacity 1s ease';
+            splash.style.opacity = '0';
+            setTimeout(function() {
+                window.location.href = "home.html";
+            }, 1000); // Wait for 1 second after fade out
+            }, 4000); // 4000 milliseconds = 4 seconds
+    </script>
 </body>
 </html>

@@ -2,24 +2,24 @@
     "products" : [ {
         "id": 1,
         "title": "Whale T-Shirt",
-        "price": 49,
+        "price": 50,
         "options": {
             "colors": ["White", "Red", "Blue", "Black"],
             "sizes" : ["UK-6", "UK-7", "UK-9", "UK-12"]
         },
         "description": "Rich 100% cotton comfy t-shirt with whale illustration.",
-        "image": "product_1.jpeg"
+        "image": "product_1.png"
     },
     {
         "id": 2,
         "title": "Beach Tote Bag",
-        "price": 25,
+        "price": 45,
         "options": {
             "colors": ["White", "Beige"],
             "sizes" : ["Small", "Large"]
         },
         "description": "Rich 100% cotton tote bag suitable for the beach, with ocean-related illustrations",
-        "image": "product_4.jpeg"
+        "image": "product_4.png"
     }, 
     {
         "id": 3,
@@ -30,7 +30,7 @@
             "sizes" : ["Small", "Medium", "Large"]
         },
         "description": "Bucket hat designed for warm weather - 100% pure cotton",
-        "image": "product_5.jpeg"
+        "image": "product_5.png"
     }, 
     {
         "id": 4,
@@ -41,7 +41,7 @@
             "sizes" : ["UK-8", "UK-10"]
         },
         "description": "Rich 100% cotton comfy sweatpants with whale illustration and drawsrings",
-        "image": "product_7.jpeg"
+        "image": "product_7.png"
     },
     {
         "id": 5,
@@ -52,40 +52,40 @@
             "sizes" : ["Small", "Large"]
         },
         "description": "Our original, best-selling beach bag. Made from eco-friendly materials. ",
-        "image": "product_2.jpeg"
+        "image": "product_2.png"
     }, 
     {
         "id": 6,
         "title": "Aqua T-Shirt",
-        "price": 89,
+        "price": 85,
         "options": {
             "colors": ["Pink", "White", "Black"],
             "sizes" : ["UK-6", "UK-9", "UK-12"]
         },
         "description": "Rich 100% cotton comfy t-shirt with ocean-related illustrations.",
-        "image": "product_8.jpeg"
+        "image": "product_8.png"
     },
     {
         "id": 7,
-        "title": "Starfish Beach Hat",
+        "title": "Whale Beach Hat",
         "price": 60,
         "options": {
-            "colors": ["Black", "White"],
+            "colors": ["Beige", "White"],
             "sizes" : ["Large"]
         },
         "description": "Comfy cotton hat suitable for the beach, with a starfish patch",
-        "image": "product_9.jpeg"
+        "image": "product_9.png"
     }, 
     {
         "id": 8,
         "title": "Go fish! Tote Bag",
-        "price": 12003,
+        "price": 80,
         "options": {
             "colors": ["White", "Green", "Blue", "Beige"],
             "sizes" : ["Medium", "Large"]
         },
         "description": "Best selling tote bag, made from pure cotton and polyester. Handy for all things.",
-        "image": "product_3.jpeg"
+        "image": "product_3.png"
     }
 ]
 }

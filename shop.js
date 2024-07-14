@@ -7,6 +7,7 @@ const productModalEl = document.getElementById('product-modal-content')
 const cartModalContentEl = document.getElementById('cart-modal-content')
 const cartBtnEl = document.getElementById("btn-cart");
 var productsDataMain;
+var productsDataa;
 
 var cart = {
     products : [],
@@ -16,6 +17,13 @@ var cart = {
 }
 
 fetchJSONData();
+handleFiltering();
+
+window.onload = () => {
+    console.log("hello")
+    // handleFiltering();
+    
+}
 
 async function fetchJSONData() {
     try {
@@ -24,6 +32,7 @@ async function fetchJSONData() {
             throw new Error(`HTTP error! Status: ${res.status}`);
         }
         const data = await res.json();
+        productsDataa = data["products"]
         // console.log(data);
         displayProducts(data["products"]);
         displayCartItem();
@@ -47,12 +56,55 @@ function setLocalStorage(cartData) {
 
 // displayProducts();
 
+async function handleFiltering() {
+    const filterBtnsEl = document.getElementsByClassName("filterBtn")
+    var filteredProducts;
+    console.log(filterBtnsEl)
+    console.log(productsDataa)
+    for(let filterBtn of filterBtnsEl) {
+        filterBtn.addEventListener("click", async (e) => {
+
+            for(let filterBtn of filterBtnsEl) {
+                filterBtn.classList.remove("filter-active")
+            }
+
+            filterBtn.classList.add("filter-active")
+
+            var filterValue = e.target.dataset.filter;
+            if(filterValue === "all") {
+                displayProducts(productsDataa);
+                return;
+
+            }
+            var filterOn = e.target.dataset.filteron;
+            console.log(filterOn, filterValue)
+
+            if(filterOn === "title") {
+                filteredProducts =  productsDataa.filter(product => product.title.toLowerCase().includes(filterValue.toLowerCase()))
+                
+            } else if(filterOn === "size") {
+                filteredProducts =  productsDataa.filter(product => product.options["sizes"].includes(filterValue))
+            } else if(filterOn === "color") {
+                filteredProducts =  productsDataa.filter(product => product.options["colors"].includes(filterValue))
+            } 
+
+
+            console.log(filteredProducts)
+            displayProducts(filteredProducts);
+            console.log("hello?")
+        })
+
+    }
+}
+
 async function displayProducts(productsData) {
+    console.log("displaying")
     // console.log(productsData + "from display")
     // var fetchedData =  await fetchJSONData()
     // var productsData = fetchedData["products"];
     productsDataMain = productsData;
     if(productsData) {
+        productsEl.innerHTML = ""
         productsData.forEach(productData => {
             const productHTML = `
             <div class="product" data-product-id="${productData.id}">
@@ -77,82 +129,36 @@ async function displayProducts(productsData) {
                 </div>
             `
 
-            /*
-            
-            <span class="product-options">${productData.options.sizes[0]}, ${productData.options.colors[0]}</span>
-            */
-            /*
-            
-            <div class="product-btn">
-                <button class="btn addToCartBtn productAddToCart" type="button" data-id="${productData.id}" onClick="addToCart(this,'${productData.options.sizes[0]}', '${productData.options.colors[0]}')">Add to Cart</button>
-            </div>
-                        */
-            // onClick=addToCart(${productData.id})
             productsEl.innerHTML += productHTML;
+
 
         });
 
+        // handleFiltering();
 
-
-
-        // CART EVENT HANDLING
-        // const addToCartBtnIn = document.getElementsByClassName("addToCartBtn");
-        // for(var i = 0; i < addToCartBtnIn.length; i++) {
-        //     const button = addToCartBtnIn[i]
-        //     console.log(button + "from display");
-        //     button.addEventListener("click", (e) => {
-        //         console.log("clicked from display")
-        //         const productData = productsDataMain[e.target.dataset.id - 1]
-        //         console.log(productData)
-        //         let cartItems = fetchLocalStorage()
-        //         console.log(cartItems)
-        //         const filterData = {
-        //             productID : productData.id,
-        //             title : productData.title,
-        //             options : {
-        //                 color : productData.options.colors[0], // change
-        //                 size : productData.options.sizes[0], // change
-        //             },
-        //             price : productData.price,
-        //             qty: 1, // change later
-        //         }
-        //         console.log(filterData)
-        //         cartItems.products.push(filterData);
-        //         cartItems.totalPrice += filterData.price;
-        //         cartItems.totalQty += 1;
-        //         cartItems.shippingFee += (filterData.price * 0.05)
-        //         setLocalStorage(cartItems)
-        //         console.log("stored")
-        // })
-        // }
-        
-        
         // MODAL EVENT HANDLING
 
         const productListEl = document.getElementsByClassName("product");
+        console.log(productsData)
         for(let productItem of productListEl) {
             productItem.addEventListener('click', (e) => {
                 // console.log(e.target.tagName)
                 if(e.target.tagName == 'IMG') {
                     // console.log("clicked image")
                     var productID = e.target.closest('.product').dataset.productId;
-                    // console.log("productid" + productID)
-                    openModal(productsData[productID - 1]);
+
+                    // openModal(productsData[productID - 1]);
+                    const productData = productsData.filter(data => data.id == productID)[0]
+                    openModal(productData);
                 }
             })
         }
-        // var addToCartBtnListEl = document.getElementsByClassName('addToCartBtn');
-        // console.log(addToCartBtnListEl)
+
         return productsData;
     }
 
-
+    
 }
-
-
-
-
-
 
 function openModal(productData) {
     modalEl.style.display = "block"
@@ -191,6 +197,7 @@ function openModal(productData) {
         </div>
     `;
     productModalEl.innerHTML += modalHTML;
+
 
     // CLOSE MODAL HANDLING
     var closeBtn = document.getElementById('close-btn');
@@ -304,34 +311,19 @@ function displayCartItem() {
     })
     // oninput="handleQtyChange(event)"
     
+    cartItemsEl.querySelectorAll('input').forEach(function(input) {
+        input.addEventListener('keydown', function(e) {
+            console.log("press input")
+            e.preventDefault();
+            return false;
+        });
+    });
+
 
     cartSubtotalEl.innerText = `$${totalPrice}`;
     cartShippingEl.innerText = `$${shippingFee}`;
     cartTotalEl.innerText = `$${(totalPrice + shippingFee)}`;
 }
-
-// function handleWheel(e) {
-//     var input = e.target
-//     console.log(inputElement)
-//     inputElement.addEventListener('wheel', function(e) {
-//         // Prevent scrolling via wheel
-//         e.preventDefault();
-        
-//         // Increment or decrement the value based on wheel direction
-//         if (e.deltaY < 0) {
-//             console.log("step up")
-//             // inputElement.stepUp();
-//         } else {
-//             console.log("step down")
-//             // inputElement.stepDown();
-//         }
-//     });
-
-//     // Prevent manual typing in the inputElement field
-//     inputElement.addEventListener('keydown', function(e) {
-//         e.preventDefault();
-//     });
-// }
 
 function handleQtyChange(e) {
     var inputElement = e.target;
@@ -365,12 +357,6 @@ function openCartModal() {
     })
 }
 
-/*
-from product card
-from modal - dif color and size is poissible
-qty inc
-*/
-
 function findSelectedOption(optionsEl) {
     for(let opt of optionsEl) {
         if(opt.classList.contains("selected")) {
@@ -379,9 +365,6 @@ function findSelectedOption(optionsEl) {
     }
 
 }
-
-
-// either from product card, modal or inc quantity - refactor so that it takes in a dict of the filtered data : id, title, image, price, qty, color, size
 
 function findExactItem(item, data) {
     const { id, size, color } = item;
@@ -433,7 +416,9 @@ function handleAddToCart(e){ // pass in id? handle add tocart
     var productColor, productSize;
     const targetEl = e.target
     const productID = targetEl.dataset.id;
-    const productData = productsDataMain[productID - 1]
+    // const productData = productsDataMain[productID - 1]
+    const productData = productsDataa.filter(data => data.id == productID)[0]
+    console.log(productData)
     var filterData;
 
     // from product card
@@ -545,20 +530,8 @@ function removeFromCart(data, target) {
 // updating quantity !!
 // close btn to empty cart view !!
 // selected on first color and size in moda !!
-
+// filter buttons !!
 
 // get cart to slide
-// click out out modal to close modal
 // if productModal and cartModal are open, close productModal when cartModal is closed
-// filter buttons
 // stop user from manually entering in input number
-
-/*
-// product qty in modal
-
-<div class="product-qty">
-                    <span>Quantity</span>
-                    <input type="number" value=${productData.qty} min="1" max="10"/>
-                </div>
-                
-                */
