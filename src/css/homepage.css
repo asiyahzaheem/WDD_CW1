@@ -207,3 +207,13 @@ main p{
   background-color: #1c1c1c; /* Adjust color as needed */
   flex: 0 0 auto;
 }
+
+/* ----------Footer---------- */
+.footer_background {
+    background-image: url("../images/homepage/footer.svg");
+    background-size: cover;
+    height: 200px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+}
