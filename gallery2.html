@@ -1,78 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="src/css/gallery2.css" />
-        <link rel="stylesheet" href="src/css/nav.css" />
-        <title>Gallery</title>
-    </head>
-    <body>
-        <!-- Header -->
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="gallery2.html" class="active">Gallery</a></li>
-                    <li><a href="shop.html">Shop</a></li>
-                    <li><a href="team.html">Team</a></li>
-                    <li><a href="feedback.html">Feedback</a></li>
-                </ul>
-            </nav>
-            <div></div>
-        </header>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/css/gallery2.css" />
+    <link rel="stylesheet" href="src/css/nav.css" />
+    <title>Gallery</title>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo"></div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#feedback">Feedback</a></li>
+            </ul>
+        </nav>
+        <div></div>
+    </header>
 
-        <!-- Main -->
-        <main>
-            <div class="container">
-                <div class="slide">
-                    <div class="item" style="background-image: url(./src/images/gallery/img1.jpg);">
-                        <div class="content">
-                            <div class="name">Switzerland</div>
-                            <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
-                        </div>
-                    </div>
-                    <div class="item" style="background-image: url(./src/images/gallery/img2.jpg);">
-                        <div class="content">
-                            <div class="name">Ocean</div>
-                            <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
-                        </div>
-                    </div>
-                    <div class="item" style="background-image: url(./src/images/gallery/img3.jpg);">
-                        <div class="content">
-                            <div class="name">Iceland</div>
-                            <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
-                        </div>
-                    </div>
-                    <div class="item" style="background-image: url(./src/images/gallery/img4.jpg);">
-                        <div class="content">
-                            <div class="name">Australia</div>
-                            <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
-                        </div>
-                    </div>
-                    <div class="item" style="background-image: url(./src/images/gallery/img5.jpg);">
-                        <div class="content">
-                            <div class="name">Netherland</div>
-                            <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
-                        </div>
-                    </div>
-                    <div class="item" style="background-image: url(./src/images/gallery/img6.png);">
-                        <div class="content">
-                            <div class="name">Ireland</div>
-                            <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
-                        </div>
-                    </div>
+    <!-- Main -->
+    <main>
+        <div class="container">
+            <h2 class="gallery_title">Gallery</h2>
+            <div class="grid">
+                <div class="photo" data-name="p-1">
+                    <img src="src/images/gallery/img1.jpg" alt="image 1">
                 </div>
-                <div class="button">
-                    <button class="prev"><</button>
-                    <button class="next">></button>
+                <div class="photo" data-name="p-2">
+                    <img src="src/images/gallery/img2.jpg" alt="image 2">
+                </div>
+                <div class="photo" data-name="p-3">
+                    <img src="src/images/gallery/img3.jpg" alt="image 3">
+                </div>
+                <div class="photo" data-name="p-4">
+                    <img src="src/images/gallery/img4.jpg" alt="image 4">
+                </div>
+                <div class="photo" data-name="p-5">
+                    <img src="src/images/gallery/img5.jpg" alt="image 5">
+                </div>
+                <div class="photo" data-name="p-6">
+                    <img src="src/images/gallery/img6.jpg" alt="image 6">
+                </div>
+                <div class="photo" data-name="p-7">
+                    <img src="src/images/gallery/img7.jpg" alt="image 7">
+                </div>
+                <div class="photo" data-name="p-8">
+                    <img src="src/images/gallery/img8.jpg" alt="image 8">
+                </div>
+                <div class="photo" data-name="p-9">
+                    <img src="src/images/gallery/img9.jpg" alt="image 9">
                 </div>
             </div>
-        </main>
+        </div>
+    </main>
 
-        <!-- Footer -->
-        <footer></footer>
-        <script src="src/js/gallery.js"></script>
-    </body>
+    <!-- Image Previews -->
+    <div class="image-preview-container">
+        <div class="preview" data-target="p-1">
+            <span class="close-btn">&times;</span>
+            <img src="src/images/gallery/img1.jpg" alt="image 1">
+            <h3>Image 1</h3>
+            <p>Description for Image 1</p>
+        </div>
+        <div class="preview" data-target="p-2">
+            <span class="close-btn">&times;</span>
+            <img src="src/images/gallery/img2.jpg" alt="image 2">
+            <h3>Image 2</h3>
+            <p>Description for Image 2</p>
+        </div>
+        <div class="preview" data-target="p-3">
+            <span class="close-btn">&times;</span>
+            <img src="src/images/gallery/img3.jpg" alt="image 3">
+            <h3>Image 3</h3>
+            <p>Description for Image 3</p>
+        </div>
+        <div class="preview" data-target="p-4">
+            <span class="close-btn">&times;</span>
+            <img src="src/images/gallery/img4.jpg" alt="image 4">
+            <h3>Image 4</h3>
+            <p>Description for Image 4</p>
+        </div>
+        <div class="preview" data-target="p-5">
+            <span class="close-btn">&times;</span>
+            <img src="src/images/gallery/img5.jpg" alt="image 5">
+            <h3>Image 5</h3>
+            <p>Description for Image 5</p>
+        </div>
+        <div class="preview" data-target="p-6">
+            <span class="close-btn">&times;</span>
+            <img src="src/images/gallery/img6.jpg" alt="image 6">
+            <h3>Image 6</h3>
+            <p>Description for Image 6</p>
+        </div>
+        <div class="preview" data-target="p-7">
+            <span class="close-btn">&times;</span>
+            <img src="src/images/gallery/img7.jpg" alt="image 7">
+            <h3>Image 7</h3>
+            <p>Description for Image 7</p>
+        </div>
+        <div class="preview" data-target="p-8">
+            <span class="close-btn">&times;</span>
+            <img src="src/images/gallery/img8.jpg" alt="image 8">
+            <h3>Image 8</h3>
+            <p>Description for Image 8</p>
+        </div>
+        <div class="preview" data-target="p-9">
+            <span class="close-btn">&times;</span>
+            <img src="src/images/gallery/img9.jpg" alt="image 9">
+            <h3>Image 9</h3>
+            <p>Description for Image 9</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#0c0d0d" fill-opacity="1"
+                d="M0,150C360,190,720,110,1080,150C1260,170,1440,150,1440,150L1440,320L0,320Z">
+            </path>
+        </svg>                                   
+    </footer>
+    <script src="gallery.js"></script>
+</body>
 </html>

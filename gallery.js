@@ -1,42 +1,27 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const slideContainer = document.querySelector('.slide');
-    const items = Array.from(document.querySelectorAll('.item'));
-    const nextButton = document.querySelector('.next');
-    const prevButton = document.querySelector('.prev');
+    const previewContainer = document.querySelector('.image-preview-container');
+    const previewBoxes = previewContainer.querySelectorAll('.preview');
+    const productImages = document.querySelectorAll('.photo');
 
-    function updateItems() {
-        const items = Array.from(slideContainer.children);
-        items.forEach((item, index) => {
-            item.style.left = `calc(50% + ${index * 220}px)`;
-            item.style.opacity = index < 6 ? '1' : '0';
-            item.querySelector('.content').style.display = index === 1 ? 'block' : 'none';
-        });
-    }
-
-    function swapImages(target) {
-        slideContainer.appendChild(target);
-        updateItems();
-    }
-
-    // Event listener for each item
-    items.forEach(item => {
-        item.addEventListener('click', () => {
-            swapImages(item);
+    productImages.forEach(photo => {
+        photo.addEventListener('click', () => {
+            const name = photo.getAttribute('data-name');
+            previewContainer.style.display = 'flex';
+            previewBoxes.forEach(preview => {
+                if (preview.getAttribute('data-target') === name) {
+                    preview.classList.add('active');
+                } else {
+                    preview.classList.remove('active');
+                }
+            });
         });
     });
 
-    // Event listener for next button
-    nextButton.addEventListener('click', () => {
-        const firstItem = slideContainer.firstElementChild;
-        swapImages(firstItem);
+    previewBoxes.forEach(preview => {
+        const closeBtn = preview.querySelector('.close-btn');
+        closeBtn.addEventListener('click', () => {
+            preview.classList.remove('active');
+            previewContainer.style.display = 'none';
+        });
     });
-
-    // Event listener for prev button
-    prevButton.addEventListener('click', () => {
-        const lastItem = slideContainer.lastElementChild;
-        slideContainer.insertBefore(lastItem, slideContainer.firstElementChild);
-        updateItems();
-    });
-
-    updateItems();
 });
