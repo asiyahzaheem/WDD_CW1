@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 
 /* Remove all default margins */
 * {
@@ -21,7 +20,6 @@ body {
   position: relative;
 }
 
-
 /*----------Main----------*/
 
 main {
@@ -29,70 +27,68 @@ main {
   display: flex;
   flex-direction: column;
   color: #1c1c1c;
+  gap: 64px;
+}
+
+hr {
+  border: 2px solid #1c1c1c;
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 24px;
 }
 
 main h1 {
   font-weight: 900;
 }
 
-main p{
-    font-size: 1.3em;
-    line-height: 1.25em;
+main p {
+  font-size: 1.3em;
+  line-height: 1.25em;
 }
 
 /*Content margin*/
 .s_cont_margin {
   margin-left: auto;
   margin-right: auto;
-  width: 
-  90%;
-}
-
-/* Background Colors for section */
-.bgcolor_1 {
-  background-color: #e5fffc;
-}
-
-.bgcolor_2 {
-  background-color: #fff3d6;
+  width: 90%;
 }
 
 /*--------Section 1--------*/
 
 /*carousel div*/
-.carousel{ 
+.carousel {
   position: relative;
   height: 80vh;
   overflow: hidden;
 }
 
 /*carousel item properties*/
-.carousel_item{
+.carousel_item {
   height: 100%;
   width: 100%;
   display: none;
   opacity: 0;
-  transition: opacity 0.5s ease-in-out;/*Transition effect when changing states*/
+  transition: opacity 0.5s ease-in-out; /*Transition effect when changing states*/
 }
 
 /*carousel selected item properties*/
-.carousel_item_selected{
+.carousel_item_selected {
   display: block;
   opacity: 1;
   transition: opacity 0.5s ease-in-out;
 }
 
-.carousel_nav{
+.carousel_nav {
   width: 100%;
   padding: 20px 0;
-  position: absolute;/*Absolute position relative to the carousel div*/
+  position: absolute; /*Absolute position relative to the carousel div*/
   bottom: 0;
   left: 0;
   text-align: center;
   z-index: 2;
 }
 
-.carousel_button{
+.carousel_button {
   display: inline-block;
   width: 10px;
   height: 10px;
@@ -103,7 +99,7 @@ main p{
   cursor: pointer;
 }
 
-.carousel_button_selected{
+.carousel_button_selected {
   display: inline-block;
   width: 20px;
   height: 10px;
@@ -121,7 +117,7 @@ main p{
 
 /* Pseudo class for dark overlay */
 .carousel_item::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -134,7 +130,9 @@ main p{
 .s1_content {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);/*Because absolute positioning works from the edges the div is not centered so we make it so the top of the div is -50% of its original size*/
+  transform: translateY(
+    -50%
+  ); /*Because absolute positioning works from the edges the div is not centered so we make it so the top of the div is -50% of its original size*/
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -148,7 +146,7 @@ main p{
   font-size: 3em;
 }
 
-#s1_paragraph{
+#s1_paragraph {
   width: 40%;
 }
 
@@ -169,7 +167,6 @@ main p{
 
 .s2_title {
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
-
   /* See Through Text */
   font-size: 8em;
   background: url("../images/homepage/section_2.jpg") repeat;
@@ -191,12 +188,12 @@ main p{
   margin: 24px 0 24px 0;
 }
 
-#s3_paragraph{
+#s3_paragraph {
   margin: 18px 0 18px 0;
 }
 
 /* --------Section 4-------- */
-.s4_main_container{
+.s4_main_container {
   display: flex;
   overflow-x: auto;
   scroll-behavior: smooth;
@@ -204,7 +201,7 @@ main p{
   padding: 20px;
   justify-content: space-between;
 }
-.s4_sub-container{
+.s4_sub-container {
   min-width: 250px;
   min-height: 400px;
   background-color: #1c1c1c; /* Adjust color as needed */
@@ -212,17 +209,30 @@ main p{
   transition: ease-in-out 0.3s;
 }
 
-.s4_sub-container:hover{
+.s4_sub-container:hover {
   transform: scale(1.05);
   transition: ease-in-out 0.3s;
 }
 
 /* ----------Footer---------- */
-.footer_background {
-    background-image: url("../images/homepage/footer.svg");
-    background-size: cover;
-    height: 200px;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-position: bottom center;
+.footer {
+  background-color: #1c1c1c;
+  height: 200px;
+  width: 100%;
+  color: #f5f5f5;
+}
+
+.footer_content{
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  padding: 12px 0;
+}
+
+.footer hr{
+  border: 1px solid #f5f5f5;
+  margin: 10px auto;
+  border-radius: 24px;
 }

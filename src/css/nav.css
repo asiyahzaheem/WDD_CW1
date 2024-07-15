@@ -22,10 +22,8 @@ header div {
   height: 60px;
 }
 
-.logo {
-  background-image: url("../images/logo.png");
-  background-size: cover;
-  background-repeat: no-repeat; /* Prevent the logo from repeating */
+header #logo{
+  height: 60px;
 }
 
 nav {
