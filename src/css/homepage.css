@@ -1,4 +1,4 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 
@@ -28,8 +28,6 @@ main {
   margin: 60px 0 0 0; /* Top margin set to 60px to stop from going under the nav bar */
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: 24px;
   color: #1c1c1c;
 }
 
@@ -38,7 +36,6 @@ main h1 {
 }
 
 main p{
-    font-family: "Nunito", Arial, Helvetica, sans-serif;
     font-size: 1.3em;
     line-height: 1.25em;
 }
@@ -163,6 +160,7 @@ main p{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-color: #1c1c1c;
 }
 
 .s2_heading {
@@ -170,10 +168,15 @@ main p{
 }
 
 .s2_title {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+
   /* See Through Text */
   font-size: 8em;
-  background: url("../images/homepage/sample2.jpg") repeat;
+  background: url("../images/homepage/section_2.jpg") repeat;
+  background-position: center;
   background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   -webkit-background-clip: text; /* For WebKit browsers */
   background-clip: text; /* Standard property for other browsers */
   -moz-background-clip: text; /* For Firefox */
@@ -193,7 +196,7 @@ main p{
 }
 
 /* --------Section 4-------- */
-.s4_circle_holder{
+.s4_main_container{
   display: flex;
   overflow-x: auto;
   scroll-behavior: smooth;
@@ -201,11 +204,17 @@ main p{
   padding: 20px;
   justify-content: space-between;
 }
-.s4_circles{
+.s4_sub-container{
   min-width: 250px;
   min-height: 400px;
   background-color: #1c1c1c; /* Adjust color as needed */
   flex: 0 0 auto;
+  transition: ease-in-out 0.3s;
+}
+
+.s4_sub-container:hover{
+  transform: scale(1.05);
+  transition: ease-in-out 0.3s;
 }
 
 /* ----------Footer---------- */
