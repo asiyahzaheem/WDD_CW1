@@ -41,15 +41,15 @@ main {
 }
 
 .photo img {
-    width: 100%;
-    height: auto;
+    width: 400px;
+    height: 300px;
     border-radius: 5px;
     object-fit: cover;
     transition: transform 0.3s ease;
 }
 
 .photo img:hover {
-    transform: scale(1.3);
+    transform: scale(1.1);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     cursor: pointer;
 }
