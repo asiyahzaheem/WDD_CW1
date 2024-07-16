@@ -5,6 +5,7 @@
 * {
   margin: 0px;
   padding: 0px;
+  box-sizing: content-box;/* Overwrite box sizing in global css*/
 }
 
 /*----------Body----------*/
@@ -15,7 +16,7 @@ html {
 }
 
 body {
-  background-color: #f5f5f5;
+  background-color: var(--white);
   font-family: "Nunito", Arial, Helvetica, sans-serif;
   position: relative;
 }
@@ -24,6 +25,7 @@ body {
 
 main {
   margin: 60px 0 0 0; /* Top margin set to 60px to stop from going under the nav bar */
+  max-width: 100%; /*Overwrite max width in global css*/
   display: flex;
   flex-direction: column;
   color: #1c1c1c;
@@ -31,7 +33,7 @@ main {
 }
 
 hr {
-  border: 2px solid #1c1c1c;
+  border: 2px solid var(--black);
   width: 90%;
   margin: 0 auto;
   border-radius: 24px;
@@ -137,12 +139,13 @@ main p {
   flex-direction: column;
   justify-content: center;
   z-index: 2;
-  color: #f5f5f5;
+  color: var(--white);
   padding: 0 24px 0 24px;
 }
 
 .s1_content h1 {
   margin-bottom: 12px;
+  font-family: "Montserrat  ", Arial, Helvetica, sans-serif;
   font-size: 3em;
 }
 
@@ -158,7 +161,7 @@ main p {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #1c1c1c;
+  background-color: var(--black-1);
 }
 
 .s2_heading {
@@ -193,17 +196,23 @@ main p {
 }
 
 /* --------Section 4 & 5 -------- */
+.s4_heading{
+  text-align: center;
+  margin-bottom: 24px;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}
+
 .s4-5_main_container {
   display: flex;
   overflow-x: auto;
   scroll-behavior: smooth;
-  gap: 100px;
+  gap: 48xpx;
   padding: 20px 0;
   justify-content: space-between;
 }
 .s4-5_sub-container {
   position: relative;
-  min-width: 250px;
+  min-width: 320px;
   min-height: 400px;
   margin: 0 1%;
   flex: 0 0 auto;
@@ -214,7 +223,7 @@ main p {
 
 .s4-5_sub-container:hover {
   transform: scale(1.05);
-  box-shadow: 5px 5px 3px 1px #494949;
+  box-shadow: 6px 6px 6px 1px var(--black-0);
   transition: ease-in-out 0.3s;
 }
 
@@ -283,7 +292,7 @@ main p {
 
 .s5_content > span{
   margin-top: 24px;
-  font-size: 24px;
+  font-size: 20px;
   color: red;
 }
 
