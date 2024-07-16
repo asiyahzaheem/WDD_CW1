@@ -133,7 +133,7 @@
     <script>
         const cartItemsEl = document.getElementById("cart-items")
         function fetchLocalStorage() {
-            const LSdata = JSON.parse(localStorage.getItem("cart")) || cart
+            const LSdata = JSON.parse(localStorage.getItem("cart"))
             // console.log(LSdata)
             return LSdata
         }

@@ -81,7 +81,6 @@ async function handleFiltering() {
 
             if(filterOn === "title") {
                 filteredProducts =  productsDataa.filter(product => product.title.toLowerCase().includes(filterValue.toLowerCase()))
-                
             } else if(filterOn === "size") {
                 filteredProducts =  productsDataa.filter(product => product.options["sizes"].includes(filterValue))
             } else if(filterOn === "color") {
@@ -537,3 +536,7 @@ function removeFromCart(data, target) {
 // if productModal and cartModal are open, close productModal when cartModal is closed
 // back to shop in checkout page
 // checkout processing
+// dislay qty of items in cart
+// indicate mandotary fields
+// validdation checks
+// basck to the top button in content page
