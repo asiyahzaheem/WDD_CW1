@@ -531,7 +531,9 @@ function removeFromCart(data, target) {
 // close btn to empty cart view !!
 // selected on first color and size in moda !!
 // filter buttons !!
+// stop user from manually entering in input number
 
 // get cart to slide
 // if productModal and cartModal are open, close productModal when cartModal is closed
-// stop user from manually entering in input number
+// back to shop in checkout page
+// checkout processing
