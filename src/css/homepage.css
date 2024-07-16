@@ -28,7 +28,7 @@ main {
   max-width: 100%; /*Overwrite max width in global css*/
   display: flex;
   flex-direction: column;
-  color: #1c1c1c;
+  color: var(--black);
   gap: 64px;
 }
 
@@ -277,7 +277,7 @@ main p {
   display: flex;
   flex-direction: column;
   padding: 10px;
-  border: 1px solid #1c1c1c;
+  border: 1px solid var(--black);
   box-sizing: border-box;
 }
 
@@ -297,7 +297,7 @@ main p {
 }
 
 .s5_content:hover{
-  border: 2px solid #1c1c1c;
+  border: 2px solid var(--black);
   background-color: #d7efe5;
   color: #00aeef;
 }
@@ -309,7 +309,7 @@ main p {
 
 /* ----------Footer---------- */
 .footer {
-  background-color: #1c1c1c;
+  background-color: var(--black);
   height: 200px;
   width: 100%;
   color: #f5f5f5;
