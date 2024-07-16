@@ -17,7 +17,17 @@ PARAGRAPH FONTS
 'lucida console', 'Courier New', Courier, monospace
 */
 
+/* Color Theme Swatches in Hex */
+.color-1 { color: #1D5959; }
+.color-2 { color: #58A69E; }
+.color-3 { color: #378C74; }
+.color-4 { color: #F2D5C4; }
+.color-5 { color: #F25922; }
+
+
+
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 :root {
     /* BASE COLORS */
@@ -63,7 +73,6 @@ PARAGRAPH FONTS
    --weight-m: 500; /* medium */
    --weight-sb: 600; /* semi bold */
    --weight-b: 700; /* bold */
-
 }
 
 * {
@@ -73,12 +82,12 @@ PARAGRAPH FONTS
 }
 
 html {
-    
-    font-size: 62.5%;
+    /* font-size: 62.5%; */
 }
 
 body {
-    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    /* font-family: "Poppins", Arial, Helvetica, sans-serif; */
+    font-family: "Nunito", Helvetica, sans-serif;
     background-color: var(--white);
 }
 

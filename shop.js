@@ -7,9 +7,7 @@ const productModalEl = document.getElementById('product-modal-content')
 const cartModalContentEl = document.getElementById('cart-modal-content')
 const cartBtnEl = document.getElementById("btn-cart");
 var productsDataMain;
-
-// total price for cart element !
-// round values to 2dp
+var productsDataa;
 
 var cart = {
     products : [],
@@ -19,6 +17,13 @@ var cart = {
 }
 
 fetchJSONData();
+handleFiltering();
+
+window.onload = () => {
+    console.log("hello")
+    // handleFiltering();
+    
+}
 
 async function fetchJSONData() {
     try {
@@ -27,7 +32,8 @@ async function fetchJSONData() {
             throw new Error(`HTTP error! Status: ${res.status}`);
         }
         const data = await res.json();
-        console.log(data);
+        productsDataa = data["products"]
+        // console.log(data);
         displayProducts(data["products"]);
         displayCartItem();
         // return data;
@@ -38,7 +44,7 @@ async function fetchJSONData() {
 
 function fetchLocalStorage() {
     const LSdata = JSON.parse(localStorage.getItem("cart")) || cart
-    console.log(LSdata)
+    // console.log(LSdata)
     return LSdata
 }
 
@@ -50,12 +56,55 @@ function setLocalStorage(cartData) {
 
 // displayProducts();
 
+async function handleFiltering() {
+    const filterBtnsEl = document.getElementsByClassName("filterBtn")
+    var filteredProducts;
+    console.log(filterBtnsEl)
+    console.log(productsDataa)
+    for(let filterBtn of filterBtnsEl) {
+        filterBtn.addEventListener("click", async (e) => {
+
+            for(let filterBtn of filterBtnsEl) {
+                filterBtn.classList.remove("filter-active")
+            }
+
+            filterBtn.classList.add("filter-active")
+
+            var filterValue = e.target.dataset.filter;
+            if(filterValue === "all") {
+                displayProducts(productsDataa);
+                return;
+
+            }
+            var filterOn = e.target.dataset.filteron;
+            console.log(filterOn, filterValue)
+
+            if(filterOn === "title") {
+                filteredProducts =  productsDataa.filter(product => product.title.toLowerCase().includes(filterValue.toLowerCase()))
+                
+            } else if(filterOn === "size") {
+                filteredProducts =  productsDataa.filter(product => product.options["sizes"].includes(filterValue))
+            } else if(filterOn === "color") {
+                filteredProducts =  productsDataa.filter(product => product.options["colors"].includes(filterValue))
+            } 
+
+
+            console.log(filteredProducts)
+            displayProducts(filteredProducts);
+            console.log("hello?")
+        })
+
+    }
+}
+
 async function displayProducts(productsData) {
-    console.log(productsData + "from display")
+    console.log("displaying")
+    // console.log(productsData + "from display")
     // var fetchedData =  await fetchJSONData()
     // var productsData = fetchedData["products"];
     productsDataMain = productsData;
     if(productsData) {
+        productsEl.innerHTML = ""
         productsData.forEach(productData => {
             const productHTML = `
             <div class="product" data-product-id="${productData.id}">
@@ -67,129 +116,49 @@ async function displayProducts(productsData) {
                              <span class="product-title">${productData.title}</span>
                              <span class="product-price">$ ${productData.price}</span>
                          </div>
-                         <span class="product-options">${productData.options.sizes[0]}, ${productData.options.colors[0]}</span>
+                         <div class="product-options">
+                            <span class="size-opt">${productData.options.sizes[0]}</span>
+                            <span> | </span>
+                            <span class="color-opt">${productData.options.colors[0]}</span>
+                         </div>
+                         
                          <div class="product-btn">
-                            <button class="btn addToCartBtn" type="button" data-id="${productData.id}" onClick=addToCart(this) >Add to Cart</button>
+                            <button class="btn addToCartBtn productAddToCart" type="button" data-id="${productData.id}" onClick=handleAddToCart(event) > Add to Cart</button>
                         </div>
                     </div>
                 </div>
             `
 
-            // onClick=addToCart(${productData.id})
             productsEl.innerHTML += productHTML;
+
 
         });
 
+        // handleFiltering();
 
-
-        // CART EVENT HANDLING
-        // const addToCartBtnIn = document.getElementsByClassName("addToCartBtn");
-        // for(var i = 0; i < addToCartBtnIn.length; i++) {
-        //     const button = addToCartBtnIn[i]
-        //     console.log(button + "from display");
-        //     button.addEventListener("click", (e) => {
-        //         console.log("clicked from display")
-        //         const productData = productsDataMain[e.target.dataset.id - 1]
-        //         console.log(productData)
-        //         let cartItems = fetchLocalStorage()
-        //         console.log(cartItems)
-        //         const filterData = {
-        //             productID : productData.id,
-        //             title : productData.title,
-        //             options : {
-        //                 color : productData.options.colors[0], // change
-        //                 size : productData.options.sizes[0], // change
-        //             },
-        //             price : productData.price,
-        //             qty: 1, // change later
-        //         }
-        //         console.log(filterData)
-        //         cartItems.products.push(filterData);
-        //         cartItems.totalPrice += filterData.price;
-        //         cartItems.totalQty += 1;
-        //         cartItems.shippingFee += (filterData.price * 0.05)
-        //         setLocalStorage(cartItems)
-        //         console.log("stored")
-        // })
-        // }
-        
-        
         // MODAL EVENT HANDLING
 
         const productListEl = document.getElementsByClassName("product");
-        for(var i = 0; i < productListEl.length; i++) {
-            productListEl[i].addEventListener('click', (e) => {
+        console.log(productsData)
+        for(let productItem of productListEl) {
+            productItem.addEventListener('click', (e) => {
                 // console.log(e.target.tagName)
                 if(e.target.tagName == 'IMG') {
                     // console.log("clicked image")
                     var productID = e.target.closest('.product').dataset.productId;
-                    // console.log("productid" + productID)
-                    openModal(productsData[productID - 1]);
+
+                    // openModal(productsData[productID - 1]);
+                    const productData = productsData.filter(data => data.id == productID)[0]
+                    openModal(productData);
                 }
             })
         }
-        // var addToCartBtnListEl = document.getElementsByClassName('addToCartBtn');
-        // console.log(addToCartBtnListEl)
+
         return productsData;
     }
 
-
-}
-
-function addToCart(e) {
-    const productID = e.dataset.id;
-    const productData = productsDataMain[productID - 1]
-    console.log(productData)
-    let cartItems = fetchLocalStorage()
-    console.log(cartItems)
-    let cartProductItems = cartItems.products
-    const foundItem = cartProductItems.find(item => item.productID.toString() == productID.toString())
-    if(foundItem) {
-        console.log("found" + foundItem)
-        cartItems.products = cartItems.products.map(item => item.productID.toString() == productID.toString() ? {...item, qty: item.qty + 1} : item)
-        console.log(cartItems.products)
-
-    } else {
-        const filterData = {
-            productID : productData.id,
-            title : productData.title,
-            options : {
-                color : productData.options.colors[0], // change
-                size : productData.options.sizes[0], // change
-            },
-            image: productData.image,
-            price : productData.price,
-            qty: 1, // change later
-        }
-        console.log(filterData)
-        cartItems.products.push(filterData);
-    }
-
-    cartItems.totalPrice = Math.round((cartItems.totalPrice + productData.price) * 100) / 100
-    cartItems.totalQty += 1;
-    cartItems.shippingFee = Math.round((cartItems.shippingFee + (productData.price * 0.05)) * 100) / 100
-    setLocalStorage(cartItems)
-    console.log("stored")
-    displayCartItem();
-    openCartModal();
     
-
-    
-
 }
-// function addToCartModal() {
-//     console.log("add to cart modal")
-//     var addToCartBtnListEl = document.getElementsByClassName('addToCartBtn');
-//     console.log(addToCartBtnListEl)
-//     for(var i = 0; i < addToCartBtnListEl.length; i++) {
-//         addToCartBtnListEl[i].addEventListener('click', (e) => {
-//         var productID = e.target.dataset.id;
-//         console.log(productID)
-//         addToCart(productsDataMain[productID - 1])
-//         })
-//     }
-// }
-
 
 function openModal(productData) {
     modalEl.style.display = "block"
@@ -205,33 +174,30 @@ function openModal(productData) {
                 <hr>
                 <div class="product-color">
                     <span>Choose a Color </span>
-                    <div class="options">
+                    <div class="options colorOptions">
                     ${productData.options.colors.map(color => (
-                        `<button id="${color.toLowerCase()}"></button>`
+                        `<div id="${color}" class="color-opt"></div>`
                     )).join('')}
                     </div>
                 </div>
                 <hr>
                 <div class="product-size">
                     <span>Choose a Size </span>
-                    <div class="options">
+                    <div class="options sizeOptions">
                     ${productData.options.sizes.map(size => (
-                        `<button id="${size.toLowerCase()}">${size}</button>`
+                        `<div id="${size}" class="size-opt">${size}</div>`
                     )).join('')}
                     </div>
                 </div>
                 <hr>
-                <div class="product-qty">
-                    <span>Quantity</span>
-                    <input type="number" value=${productData.qty} min="1" max="10"/>
-                </div>
                 <div class="product-btn">
-                    <button class="btn addToCartBtn" type="button" data-id="${productData.id}" onClick=addToCart(this)>Add to Cart</button>
+                    <button class="btn addToCartBtn modalAddToCart" type="button" data-id="${productData.id}" onClick=handleAddToCart(event)>Add to Cart</button>
                 </div>
             </div>
         </div>
     `;
     productModalEl.innerHTML += modalHTML;
+
 
     // CLOSE MODAL HANDLING
     var closeBtn = document.getElementById('close-btn');
@@ -239,15 +205,37 @@ function openModal(productData) {
     console.log("closeee")
     closeBtn.addEventListener("click", closeModal);
     
-    // var addToCartBtnListEl = document.getElementsByClassName('addToCartBtn');
-    // for(var i = 0; i < addToCartBtnListEl.length; i++) {
-    //     addToCartBtnListEl[i].addEventListener('click', (e) => {
-    //     var productID = e.target.dataset.id;
-    //     console.log(productID)
-    //     addToCart(productsDataMain[productID - 1])
-    //     })
-    // }
-    
+    // COLOR AND SIZE
+    var colorOptionEl = productModalEl.getElementsByClassName("color-opt");
+    var sizeOptionEl = productModalEl.getElementsByClassName("size-opt");
+
+    colorOptionEl[0].classList.add("selected")
+    sizeOptionEl[0].classList.add("selected")
+
+    console.log(colorOptionEl)
+    for(let colorOption of colorOptionEl) {
+        colorOption.addEventListener("click", (e) => {
+            checkClasslist("selected", colorOptionEl)
+            e.target.classList.toggle("selected");
+        })
+    }
+
+    for(let sizeOption of sizeOptionEl) {
+        sizeOption.addEventListener("click", (e) => {
+            checkClasslist("selected", sizeOptionEl)
+            e.target.classList.toggle("selected");
+        })
+    }
+
+}
+
+function checkClasslist(className, nodeList) {
+    for(let node of nodeList) {
+        if(node.classList.contains(className)) {
+            node.classList.remove(className);
+            return;
+        }
+    }
 }
 
 function closeModal() {
@@ -264,15 +252,38 @@ function closeModal() {
 // must take in { productid, options chosen etc }
 function displayCartItem() {
     const {products, totalQty, totalPrice, shippingFee} = fetchLocalStorage();
-    if(products.length == 0) {
-        console.log("Empty cart")
-        return;
-    }
+    const cartSubtotalEl = document.getElementById("cartSubtotal")
+    const cartShippingEl = document.getElementById("cartShipping")
+    const cartTotalEl = document.getElementById("cartTotal")
+    const cartHeaderEl = document.getElementById("cartHeader");
+    const cartFooterEl = document.getElementById("cartFooter");
+    
+
     cartItemsEl.innerHTML = '';
-    console.log(products)
+    cartHeaderEl.style.display = "flex"
+    cartFooterEl.style.display = "flex"
+    cartModalContentEl.classList.remove("empty");
+    // cartItemsEl.style.width = "default"
+
+    if(products.length == 0) {
+        cartModalContentEl.classList.add("empty");
+        cartHeaderEl.style.display = "none"
+        cartFooterEl.style.display = "none"
+        cartItemsEl.style.width = "100%"
+
+        cartItemsEl.innerHTML = `
+        <div class='empty-cart'>
+            <h3>Your cart is empty</h3>
+            <a href="shop.html">Continue shopping </a>
+        </div>
+        `;
+        return;
+    } 
+
+    // console.log(products)
     products.forEach(productData => {
         const cartItemHTML = `
-            <div class="cart-item">
+            <div class="cart-item" data-id=${productData.id}>
                 <div class="image">
                     <img src="src/images/${productData.image}" alt="Product 1" />
                 </div>
@@ -283,9 +294,13 @@ function displayCartItem() {
                     </div>
 
                     <div class="row">
-                        <span class="options">${productData.options.size}, ${productData.options.color}</span>
-                        <input type="number" value=${productData.qty} max="10" min="1"/>
-                        <button class="deleteFromCartBtn btn">
+                        <div class="product-options">
+                            <span class="size-opt">${productData.size}</span>
+                            <span> | </span>
+                            <span class="color-opt">${productData.color}</span>
+                         </div>
+                        <input type="number" id="cartItemAddToCart" class="cartItemAddToCart" value=${productData.qty} max="10" min="1" data-id=${productData.id} oninput="handleQtyChange(event)" />
+                        <button class="deleteFromCartBtn btn" onClick="handleRemoveFromCart(event)">
                             <ion-icon name="trash-outline" size="small"></ion-icon>
                         </button> 
                     </div>
@@ -294,13 +309,38 @@ function displayCartItem() {
             `
             cartItemsEl.innerHTML += cartItemHTML;
     })
-    const cartSubtotalEl = document.getElementById("cartSubtotal")
-    const cartShippingEl = document.getElementById("cartShipping")
-    const cartTotalEl = document.getElementById("cartTotal")
+    // oninput="handleQtyChange(event)"
+    
+    cartItemsEl.querySelectorAll('input').forEach(function(input) {
+        input.addEventListener('keydown', function(e) {
+            console.log("press input")
+            e.preventDefault();
+            return false;
+        });
+    });
+
+
     cartSubtotalEl.innerText = `$${totalPrice}`;
     cartShippingEl.innerText = `$${shippingFee}`;
     cartTotalEl.innerText = `$${(totalPrice + shippingFee)}`;
 }
+
+function handleQtyChange(e) {
+    var inputElement = e.target;
+    var oldValue = inputElement.defaultValue || 1; 
+    var newValue = inputElement.value;
+
+    if (newValue > oldValue) {
+        console.log("add one to cart")
+        handleAddToCart(e)
+    } else if(newValue < oldValue) {
+        console.log("User clicked the down arrow.");
+        handleRemoveFromCart(e);
+    }
+
+    inputElement.defaultValue = newValue;
+}
+
 
 function openCartModal() {
     cartModalEl.style.display = "block";
@@ -316,18 +356,184 @@ function openCartModal() {
         cartModalEl.style.display = "none";
     })
 }
+
+function findSelectedOption(optionsEl) {
+    for(let opt of optionsEl) {
+        if(opt.classList.contains("selected")) {
+            return opt.id
+        }
+    }
+
+}
+
+function findExactItem(item, data) {
+    const { id, size, color } = item;
+    return id.toString() === data.id.toString() && 
+            size.toString() === data.size.toString() && 
+            color.toString() === data.color.toString();
+}
+
+function addToCart(data) {
+    let cartItems = fetchLocalStorage()
+    // console.log(cartItems)
+    let cartProductItems = cartItems.products
+
+    // console.log(data)
+    const foundItem = cartProductItems.find(item => {
+        const { id, size, color } = item;
+        return id.toString() === data.id.toString() && 
+               size.toString() === data.size.toString() && 
+               color.toString() === data.color.toString();
+      });
+      
+ 
+    // check if same size and color (maybe change to options)
+    if(foundItem) {
+        console.log("found" + foundItem.toString())
+        cartItems.products = cartItems.products.map(item => item.id.toString() == data.id.toString() && item.size.toString() == data.size.toString() && item.color.toString() == data.color.toString() ? {...item, qty: item.qty + 1} : item)
+        // console.log(cartItems.products)
+    } else {
+        cartItems.products.push(data);
+    }
+
+    cartItems.totalPrice = Math.round((cartItems.totalPrice + data.price) * 100) / 100
+    cartItems.totalQty += 1;
+    cartItems.shippingFee = Math.round((cartItems.shippingFee + (data.price * 0.05)) * 100) / 100
+    setLocalStorage(cartItems)
+    // console.log("stored")
+    // if(cartItems.products.length == 0) {
+    //     console.log("Empty cart")
+    //     return;
+    // }
+    displayCartItem();
+    openCartModal();
+    
+}
+
+
+function handleAddToCart(e){ // pass in id? handle add tocart
+    // console.log(e.target)
+    var productColor, productSize;
+    const targetEl = e.target
+    const productID = targetEl.dataset.id;
+    // const productData = productsDataMain[productID - 1]
+    const productData = productsDataa.filter(data => data.id == productID)[0]
+    console.log(productData)
+    var filterData;
+
+    // from product card
+    if(targetEl.classList.contains("productAddToCart") ) {
+        console.log("product card")
+        const productEl = targetEl.closest(".product");
+        productColor = productEl.querySelector(".color-opt").textContent;
+        productSize = productEl.querySelector(".size-opt").textContent;
+
+    } else if(targetEl.classList.contains("modalAddToCart")) {
+        console.log("modal cart")
+        const colorOptionsEl = document.querySelector(".colorOptions").children;
+        const sizeOptionsEl = document.querySelector(".sizeOptions").children;
+        productColor = findSelectedOption(colorOptionsEl)
+        productSize = findSelectedOption(sizeOptionsEl)
+        // console.log(productColor, productSize)
+    } else if(targetEl.classList.contains("cartItemAddToCart")) {
+        console.log("cart item cart")
+        const cartItemEl = targetEl.closest(".cart-item");
+        // console.log(cartItemEl)
+        productColor = cartItemEl.querySelector(".color-opt").textContent;
+        productSize = cartItemEl.querySelector(".size-opt").textContent;
+        // console.log(productColor, productSize)
+    }
+
+    filterData = {
+        id : productData.id,
+        title : productData.title,
+        image: productData.image,
+        price : productData.price,
+        color : productColor.toLowerCase(), // change case
+        size : productSize.toLowerCase(), // change case
+        qty: 1, // change later
+    }
+
+    addToCart(filterData)
+    // console.log(filterData)
+
+}
+
+function handleRemoveFromCart(e) {
+    console.log(e.target + "remove!")
+    const cartItemEl = e.target.closest(".cart-item");
+    const id = cartItemEl.dataset.id;
+    // const target = cartItemEl
+    console.log(e.target.tagName)
+    const color = cartItemEl.querySelector(".color-opt").textContent;
+    const size = cartItemEl.querySelector(".size-opt").textContent;
+    removeFromCart({id, color, size}, e.target)
+}
+
+function removeFromCart(data, target) {
+    const {id, color, size} = data;
+    var newPrice, newQty;
+    console.log(id, color, size)
+    let cartItems = fetchLocalStorage()
+    console.log(cartItems.products)
+    const sameCartItem =  cartItems.products.find(item => item.id == id && item.color == color && item.size == size)
+    console.log(sameCartItem)
+    var tagName = target.tagName.toLowerCase()
+    if(tagName == "ion-icon" || tagName == "button") {
+        console.log("remove")
+        cartItems.products = cartItems.products.filter(item => {
+            console.log(item, sameCartItem)
+            return item != sameCartItem}
+        )
+        console.log(cartItems.products)
+        
+        newPrice = sameCartItem.price * sameCartItem.qty
+        newQty = sameCartItem.qty;
+        console.log(newPrice)
+        
+        // openCartModal();
+
+    } else if(tagName == "input") {
+        console.log("reduce")
+        cartItems.products = cartItems.products.map(item => item == sameCartItem ? {...item, qty: item.qty - 1} : item)
+        newPrice = sameCartItem.price;
+        newQty = 1
+        console.log("new ---")
+        console.log(cartItems.products)
+    }
+
+    cartItems.totalPrice = Math.round((cartItems.totalPrice - newPrice) * 100) / 100
+    cartItems.totalQty -= newQty;
+    cartItems.shippingFee = Math.round((cartItems.shippingFee - (newPrice * 0.05)) * 100) / 100
+
+    console.log(cartItems)
+    setLocalStorage(cartItems)
+    displayCartItem();
+    console.log("items in cart" + newQty)
+    // if click from remove button - remove entire el
+    // if click from input, check if qty > 1. if yes reduce qty
+
+}
+// handleATC event fn ??
 // make rest of th page unresponsive !done
 // fix closebtn issue ! done
 // set class to product instead of id !done
-// active on color/size - radio button fieldset
+// active on color/size - radio button fieldset !done
+// initally first two are selected !!
+// cart local storage !!
+// Fetching the data and handling the promise !!
+// total price for cart element !!
+// round values to 2dp !!
+// same product id but different color and size.... !!
+// empty cart view !!
+// remove cart items !!
+// updating quantity !!
+// close btn to empty cart view !!
+// selected on first color and size in moda !!
+// filter buttons !!
+// stop user from manually entering in input number
+
 // get cart to slide
-// cart local storage
-// click out out modal to close modal
 // if productModal and cartModal are open, close productModal when cartModal is closed
-// Fetching the data and handling the promise
-
-// event handler for addToCart event
-// addToCart function
-// event handler for delete event
-// delete function
-
+// back to shop in checkout page
+// checkout processing
