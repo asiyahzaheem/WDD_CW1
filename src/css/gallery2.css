@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
 /* Smooth scrolling effect when going to in page anchor points */
 html {
     scroll-behavior: smooth;
@@ -5,8 +7,8 @@ html {
 
 body {
     background-color: #f5f5f5;
-    font-family: "Montserrat", Arial, Helvetica, sans-serif;
-    position: relative;
+    font-family: "Nunito", "Helvetica", sans-serif;
+    margin: 0;
 }
 
 /*----------Main----------*/
