@@ -65,7 +65,7 @@ main {
     min-height: 100vh;
     width: 100%;
     background: rgba(0, 0, 0, 0.8);
-    display: none;
+    display: none; /* Hide the preview by default */
     align-items: center;
     justify-content: center;
     z-index: 1000;
@@ -73,26 +73,27 @@ main {
 }
 
 .image-preview-container .preview {
-    display: none;
+    display: none; /* Hide the preview by default */
     padding: 2rem;
     text-align: center;
     background: #ffffff;
     position: relative;
     margin: 2rem;
-    width: 40rem; /* Increased width for larger preview */
-    height: 580px;
+    width: 67rem; /* Increased width for larger preview */
+    height: 470px;
     border-radius: 10px;
 }
 
 .image-preview-container .preview.active {
-    display: block;
+    display: block; /* Show the preview when it's active */
 }
 
 .image-preview-container .preview img {
-    width: 90%; /* Ensure the image fits within the preview */
+    width: 60%;
     height: 400px; /* Increased height for larger preview */
     border-radius: 5px;
-    object-fit: cover;
+    float: left;
+    margin: 1.7rem 1rem 0 0;
 }
 
 .image-preview-container .close-btn {
@@ -104,15 +105,27 @@ main {
     font-size: 2rem;
 }
 
-.image-preview-container .preview h3 {
-    color: #444;
-    padding: 0.5rem 0;
-    font-size: 2.5rem;
+.image-preview-container .preview .description {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align text to the top */
+    width: 40%; /* Limit width to the remaining 40% */
+    float: right;
+    margin-top: -25rem; /* Add some top margin for spacing */
 }
 
-.image-preview-container .preview p {
+.image-preview-container .preview .description h3 {
+    color: #444;
+    margin: 0;
+    padding: 0.5rem 0;
+    font-size: 2rem; /* Adjusted font size */
+}
+
+.image-preview-container .preview .description p {
     line-height: 1.5;
-    padding: 1rem 0;
-    font-size: 1.6rem;
+    padding: 1rem 0 0 1rem;
+    margin: 0; /* Remove top margin to move it closer to the heading */
+    font-size: 1.2rem; /* Adjusted font size */
     color: #777;
+    
 }
