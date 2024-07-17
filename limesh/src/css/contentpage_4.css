@@ -4,7 +4,7 @@ main {
     flex-direction: column;
     justify-content: space-between;
     gap: 24px;
-    color: #ffffff;
+    color: #000000;
 }
 
 /* Containers */
