@@ -1,0 +1,9 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: content-box; /* Overwrite box sizing in global css*/
+}
+
+body{
+    height: 100vh;
+}

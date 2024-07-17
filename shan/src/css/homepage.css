@@ -10,10 +10,6 @@
 
 /*----------Body----------*/
 
-/* Smooth scrolling effect when going to in page anchor points */
-html {
-  scroll-behavior: smooth;
-}
 
 body {
   background-color: var(--white);

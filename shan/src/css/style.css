@@ -85,6 +85,11 @@ FONT SIZE SYSTEM (px)
     box-sizing: border-box ;
 }
 
+/* Smooth scrolling effect when going to in page anchor points */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
     font-family: "Nunito", Helvetica, sans-serif !important;
     background-color: var(--white);
@@ -94,9 +99,6 @@ main {
     max-width: 90%;
     margin: 0 auto;
 }
-
-/* NAV */
-
 
 /*----------Header----------*/
 
