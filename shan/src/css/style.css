@@ -85,10 +85,6 @@ FONT SIZE SYSTEM (px)
     box-sizing: border-box ;
 }
 
-html {
-    /* font-size: 62.5%; */
-}
-
 body {
     font-family: "Nunito", Helvetica, sans-serif !important;
     background-color: var(--white);
