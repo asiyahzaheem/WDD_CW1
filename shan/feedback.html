@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/css/style.css" />
     <link rel="stylesheet" href="src/css/feedback.css" />
+    <link rel="stylesheet" href="src/css/nav.css" />
     <title>Feedback Form</title>
   </head>
   <body>
     <!-- Header -->
     <header>
-      <div><img src="src/images/global/logo.png" alt="logo.png" id="logo" /></div>
+      <div><img src="src/images/global/logo.png" alt="logo.png" id="logo"></div>
       <nav>
         <ul>
           <li><a href="home.html">Home</a></li>
@@ -23,7 +24,7 @@
       <div class="nav_profile_container">
         <div class="nav_profile" onclick="window.location.href='profile.html'">
           <span>Profile</span>
-          <i id="profile_logo"></i>
+           <i id="profile_logo"></i>
         </div>
       </div>
     </header>
@@ -31,7 +32,7 @@
     <!-- Main -->
     <main class="s_cont_margin">
       <h1>SEND US YOUR FEEDBACK</h1>
-      <form>
+      <form id="feedbackForm" method="post">
         <!-- name -->
         <label for="name">Enter Your Full Name <span class="required">*</span></label>
         <input type="text" name="name" id="name" required/>
@@ -91,6 +92,15 @@
         </div>
       </form>
     </main>
+    <!-- Preview Modal -->
+    <div id="previewModal" style="display:none;">
+      <div class="modal-content">
+          <h2>Preview Your Feedback</h2>
+          <p id="previewContent"></p>
+          <button onclick="closeModal()">Edit</button>
+          <button onclick="submitForm()">Submit</button>
+      </div>
+    </div>
     <script src="src/js/feedback.js"></script>
   </body>
 </html>
