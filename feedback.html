@@ -32,17 +32,56 @@
       <h1>SEND US YOUR FEEDBACK</h1>
       <form>
         <label for="name">Enter Your Full Name</label>
-        <input type="text" name="name" id="name" placeholder="Enter Name" />
+        <input type="text" name="name" id="name" />
         <label for="email">Enter Your Email Address</label>
-        <input type="email" name="email" id="email" />
-        <label>Was this the first time visiting this website</label>
+        <input type="text" name="email" id="email" />
+        <label>Was this the first time visiting this website?</label>
         <div>
           <input type="radio" name="visit" id="yes" />
-          <label for="yes">YES</label><br>
+          <label for="yes">YES</label><br />
           <input type="radio" name="visit" id="no" />
           <label for="no">NO</label>
         </div>
-        
+        <label for="visit_reason"
+          >What is your <b>PRIMARY</b> reason to visit this website?</label
+        >
+        <textarea name="visit_reason" id="visit_reason" rows="4"></textarea>
+        <label>How satisfied are you with our website?</label>
+        <div class="rating-conatiner">
+          <div class="rating-scale">
+            <input type="radio" id="rate1" name="satisfaction" value="1" />
+            <label for="rate1">1</label>
+            <input type="radio" id="rate2" name="satisfaction" value="2" />
+            <label for="rate2">2</label>
+            <input type="radio" id="rate3" name="satisfaction" value="3" />
+            <label for="rate3">3</label>
+            <input type="radio" id="rate4" name="satisfaction" value="4" />
+            <label for="rate4">4</label>
+            <input type="radio" id="rate5" name="satisfaction" value="5" />
+            <label for="rate5">5</label>
+            <input type="radio" id="rate6" name="satisfaction" value="6" />
+            <label for="rate6">6</label>
+            <input type="radio" id="rate7" name="satisfaction" value="7" />
+            <label for="rate7">7</label>
+            <input type="radio" id="rate8" name="satisfaction" value="8" />
+            <label for="rate8">8</label>
+            <input type="radio" id="rate9" name="satisfaction" value="9" />
+            <label for="rate9">9</label>
+            <input type="radio" id="rate10" name="satisfaction" value="10" />
+            <label for="rate10" id="rate10">10</label>
+          </div>
+          <div id="rating-level">
+            <span>Not Likely</span><span>Very Likely</span>
+          </div>
+        </div>
+        <label for="questions"
+          >Do you have any additional questions or requests?</label
+        >
+        <textarea name="questions" id="questions" rows="4"></textarea>
+        <div class="button-area">
+          <button type="button">PREVIEW</button>
+          <button type="reset">CLEAR</button>
+        </div>
       </form>
     </main>
   </body>

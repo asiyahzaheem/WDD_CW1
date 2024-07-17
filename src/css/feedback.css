@@ -19,6 +19,11 @@ body {
   background-color: var(--white);
   font-family: "Nunito", Arial, Helvetica, sans-serif;
   position: relative;
+  background-color: var(--lightBlue-1);
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 110vh;
 }
 
 /*----------Main----------*/
@@ -28,15 +33,12 @@ main {
   display: flex;
   flex-direction: column;
   color: var(--black);
-  gap: 24px;
-  height: 1000px;
-}
-
-hr {
-  border: 2px solid var(--black);
-  width: 90%;
-  margin: 0 auto;
-  border-radius: 24px;
+  background-color: white;
+  gap: 10px;
+  align-content: center;
+  font-family: "Montserrat  ", Arial, Helvetica, sans-serif;
+  border-radius: 36px;
+  padding: 18px;
 }
 
 main h1 {
@@ -52,14 +54,13 @@ main p {
 .s_cont_margin {
   margin-left: auto;
   margin-right: auto;
-  width: 90%;
+  width: 500px;
 }
 
 /* ---------- Heading ---------- */
 
 main > h1 {
   text-align: center;
-  font-family: "Montserrat  ", Arial, Helvetica, sans-serif;
   color: var(--black);
 }
 
@@ -67,9 +68,106 @@ main > h1 {
 
 form {
   height: 100%;
-  width: 50%;
+  width: 500px;
   display: flex;
   flex-direction: column;
   margin: 0 auto 0 auto;
+  padding: 0 auto;
 }
 
+label,
+input,
+textarea,
+div {
+  margin: 6px 0;
+}
+
+label {
+  font-weight: var(--weight);
+  font-size: 15px;
+}
+
+span {
+  font-size: 14px;
+}
+
+input[type="text"],
+textarea {
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 1px solid #00aeef;
+  border-radius: 10px;
+}
+
+input[type="text"] {
+  height: 36px;
+}
+
+textarea{
+    resize: vertical;
+}
+
+.rating-scale {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 500px;
+}
+
+.rating-scale label {
+  display: inline-block;
+  margin: 0;
+  text-align: center;
+  cursor: pointer;
+}
+
+.rating-scale input[type="radio"] {
+  display: none;
+}
+
+.rating-scale input[type="radio"] + label {
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  padding: 9px 15px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+#rate10 {
+  padding: 9px 10px;
+}
+
+.rating-scale input[type="radio"]:checked + label {
+  background-color: #00aeef;
+  color: white;
+  border-color: #00aeef;
+}
+
+#rating-level {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button-area {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  border: 1px solid #00aeef;
+  padding: 5px 10px;
+  border-radius: 18px;
+  margin: 10px;
+  width: 28%;
+  font-weight: var(--weight-sb);
+  font-size: 18px;
+}
+
+button[type="submit"] {
+  background-color: #00aeef;
+  color: var(--white);
+}
+
+button[type="reset"] {
+  color: #00aeef;
+}
