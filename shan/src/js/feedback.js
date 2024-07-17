@@ -53,7 +53,6 @@ function checkVisit(){// If called then this is executed
     const visitInputs = document.getElementsByName('visit');
     validateRadio(visitInputs);
     if(!isValid){
-        alert('Please select YES or NO from second field');
         return false;
     } else {
         return true;
@@ -65,7 +64,6 @@ function checkRating(){
     const ratingInputs = document.getElementsByName('rating');
     validateRadio(ratingInputs);
     if(!isValid){
-        alert('Please select a rating from 1 - 10');
         return false;
     } else {
         return true;
@@ -94,10 +92,47 @@ function validateRadio(radioArray) {
 }
 
 
-function previewClick(){
-    if(validateName(nameInput.value) && validateEmail(emailInput.value) && checkVisit() && checkRating()){
-        alert("Ok");
+function previewClick() {
+    if (validateName(nameInput.value) && validateEmail(emailInput.value) && checkVisit() && checkRating()) {
+        const previewContent = `
+            <strong>Name:</strong> ${nameInput.value}<br>
+            <strong>Email:</strong> ${emailInput.value}<br>
+            <strong>First Visit:</strong> ${document.querySelector('input[name="visit"]:checked').value}<br>
+            <strong>Visit Reason:</strong> ${document.getElementById('visit_reason').value}<br>
+            <strong>Rating:</strong> ${document.querySelector('input[name="rating"]:checked').value}<br>
+            <strong>Additional Questions:</strong> ${document.getElementById('questions').value}
+        `;
+        document.getElementById('previewContent').innerHTML = previewContent;
+        openModal();
     } else {
-        alert("bruh");
+        alert("Please fill in all required fields.");
+    }
+}
+
+function openModal() {
+    document.getElementById('previewModal').style.display = 'block';
+}
+
+function closeModal() {
+    document.getElementById('previewModal').style.display = 'none';
+}
+
+function submitForm() {
+    const feedbackForm = document.getElementById('feedbackForm');
+    
+    if (validateName(nameInput.value) && validateEmail(emailInput.value) && checkVisit() && checkRating()) {
+        const emailBody = `
+            Name: ${nameInput.value}\n
+            Email: ${emailInput.value}\n
+            First Visit: ${document.querySelector('input[name="visit"]:checked').value}\n
+            Visit Reason: ${document.getElementById('visit_reason').value}\n
+            Rating: ${document.querySelector('input[name="rating"]:checked').value}\n
+            Additional Questions: ${document.getElementById('questions').value}
+        `;
+
+        window.location.href = `mailto:shan.20233126@iit.ac.lk?subject=Feedback Form Submission&body=${encodeURIComponent(emailBody)}`;
+        closeModal();
+    } else {
+        alert("Please fill in all required fields.");
     }
 }
