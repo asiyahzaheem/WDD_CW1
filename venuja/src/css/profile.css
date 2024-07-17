@@ -1,3 +1,15 @@
+* {
+   padding: 0 ;
+   margin: 0 ;
+   box-sizing: content-box ;
+}
+
+.active {
+   color: #00aeef;
+   transition: ease-in-out 0.3s;
+ }
+ 
+
 body {
    font-family: Arial, sans-serif;
    display: flex;
@@ -9,7 +21,7 @@ body {
 
 .container {
    width: 50%;
-   background: #fff;
+   background: var(--white);
    padding: 20px;
    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
    border-radius: 10px;
