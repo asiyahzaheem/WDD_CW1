@@ -79,19 +79,15 @@ FONT SIZE SYSTEM (px)
    --weight-b: 700; /* bold */
 }
 
-/* * {
-    padding: 0 ;
-    margin: 0 ;
-    box-sizing: border-box ;
-} */
-
+/* Smooth scrolling effect when going to in page anchor points */
 html {
-    /* font-size: 62.5%; */
+  scroll-behavior: smooth;
 }
 
 body {
     font-family: "Nunito", Helvetica, sans-serif !important;
     background-color: var(--white);
+    margin: 0;
 }
 
 /* main {
