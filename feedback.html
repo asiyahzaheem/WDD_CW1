@@ -29,10 +29,20 @@
       </div>
     </header>
     <main class="s_cont_margin">
-      <h1>Feedback Form</h1>
+      <h1>SEND US YOUR FEEDBACK</h1>
       <form>
-          <label for="name">Name: </label>
-          <input type="text" name="text" placeholder="Enter Name">
+        <label for="name">Enter Your Full Name</label>
+        <input type="text" name="name" id="name" placeholder="Enter Name" />
+        <label for="email">Enter Your Email Address</label>
+        <input type="email" name="email" id="email" />
+        <label>Was this the first time visiting this website</label>
+        <div>
+          <input type="radio" name="visit" id="yes" />
+          <label for="yes">YES</label><br>
+          <input type="radio" name="visit" id="no" />
+          <label for="no">NO</label>
+        </div>
+        
       </form>
     </main>
   </body>
