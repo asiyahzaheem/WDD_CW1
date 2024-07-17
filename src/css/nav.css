@@ -94,7 +94,6 @@ nav a.active {
   border: solid 2px #00aeef;  
   color: #00aeef;
   cursor: pointer;
-  background-color: #e3e3e3;
   transform: scale(1.05);
   transition: ease-in-out 0.3s;
 }

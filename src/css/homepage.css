@@ -5,6 +5,7 @@
 * {
   margin: 0px;
   padding: 0px;
+  box-sizing: content-box; /* Overwrite box sizing in global css*/
 }
 
 /*----------Body----------*/
@@ -15,7 +16,7 @@ html {
 }
 
 body {
-  background-color: #f5f5f5;
+  background-color: var(--white);
   font-family: "Nunito", Arial, Helvetica, sans-serif;
   position: relative;
 }
@@ -24,14 +25,15 @@ body {
 
 main {
   margin: 60px 0 0 0; /* Top margin set to 60px to stop from going under the nav bar */
+  max-width: 100%; /*Overwrite max width in global css*/
   display: flex;
   flex-direction: column;
-  color: #1c1c1c;
+  color: var(--black);
   gap: 64px;
 }
 
 hr {
-  border: 2px solid #1c1c1c;
+  border: 2px solid var(--black);
   width: 90%;
   margin: 0 auto;
   border-radius: 24px;
@@ -137,12 +139,13 @@ main p {
   flex-direction: column;
   justify-content: center;
   z-index: 2;
-  color: #f5f5f5;
+  color: var(--white);
   padding: 0 24px 0 24px;
 }
 
 .s1_content h1 {
   margin-bottom: 12px;
+  font-family: "Montserrat  ", Arial, Helvetica, sans-serif;
   font-size: 3em;
 }
 
@@ -158,7 +161,7 @@ main p {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #1c1c1c;
+  background-color: var(--black-1);
 }
 
 .s2_heading {
@@ -189,40 +192,147 @@ main p {
 }
 
 #s3_paragraph {
-  margin: 18px 0 18px 0;
+  margin: 18px 0 24px 0;
 }
 
-/* --------Section 4-------- */
-.s4_main_container {
+/* --------Section 4 & 5 -------- */
+.s4_heading {
+  text-align: center;
+  margin-bottom: 24px;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}
+
+.s4-5_main_container {
   display: flex;
   overflow-x: auto;
   scroll-behavior: smooth;
-  gap: 100px;
-  padding: 20px;
+  gap: 48xpx;
+  padding: 20px 0;
   justify-content: space-between;
 }
-.s4_sub-container {
-  min-width: 250px;
+.s4-5_sub-container {
+  position: relative;
+  min-width: 320px;
   min-height: 400px;
-  background-color: #1c1c1c; /* Adjust color as needed */
+  margin: 0 1%;
   flex: 0 0 auto;
+  transition: ease-in-out 0.3s;
+  overflow: hidden;
+}
+
+.s4-5_sub-container:hover {
+  transform: scale(1.05);
+  box-shadow: 6px 6px 6px 1px var(--black-0);
   transition: ease-in-out 0.3s;
 }
 
-.s4_sub-container:hover {
-  transform: scale(1.05);
-  transition: ease-in-out 0.3s;
+.s4-5_sub-container > img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100%;
+  width: auto;
+  transform: translate(-50%, -50%);
+}
+
+.s4-5_sub-container > p {
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  opacity: 0;
+  transition: 0.6s;
+  font-size: 18px;
+  color: #00aeef;
+  padding: 10px;
+}
+
+.s4-5_sub-container > p > span {
+  font-size: 16px;
+  margin: 10px 10px 0 0;
+  color: #f5f5f5;
+}
+
+.s4-5_sub-container:hover > p {
+  opacity: 1;
+}
+
+/* ---------- Section 5 --------- */
+
+.s5_main_div {
+  background-color: #e4f6ff;
+  padding: 48px;
+}
+
+.s5_content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border: 1px solid var(--black);
+  box-sizing: border-box;
+}
+
+.s5_content > h3 {
+  color: #00aeef;
+  margin-top: 12px;
+}
+
+.s5_content > p {
+  margin-top: 12px;
+}
+
+.s5_content > span {
+  margin-top: 24px;
+  font-size: 20px;
+  color: red;
+}
+
+.s5_content:hover {
+  border: 2px solid var(--black);
+  background-color: #d7efe5;
+  color: #00aeef;
+}
+
+.s5_content:hover > h1 {
+  color: #00aeef;
+}
+
+#back_to_top {
+  text-align: center;
+  font-size: 1.2em;
+}
+
+#back_to_top a {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+  text-decoration: none; /* Remove underline from the link */
+  color: var(--black);
+}
+
+#back_to_top img {
+  width: 48px;
+  height: 48px;
+  margin-bottom: -15px;
 }
 
 /* ----------Footer---------- */
 .footer {
-  background-color: #1c1c1c;
+  background-color: var(--black);
   height: 200px;
   width: 100%;
   color: #f5f5f5;
 }
 
-.footer_content{
+.footer_content {
   display: flex;
   justify-content: space-between;
   margin-left: auto;
@@ -231,7 +341,7 @@ main p {
   padding: 12px 0;
 }
 
-.footer hr{
+.footer hr {
   border: 1px solid #f5f5f5;
   margin: 10px auto;
   border-radius: 24px;
