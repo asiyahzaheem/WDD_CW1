@@ -1,0 +1,86 @@
+/* Containers */
+.container1 {
+    width: 80%;
+    margin: 20px auto; 
+    padding: 20px; 
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #b3e0ff; /* Light blue for header */
+}
+
+.container2, .container3, .container4, .container5, .container6, .container7 {
+    width: 80%;
+    margin: 20px auto; 
+    padding: 20px; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #cceeff; /* Light teal for containers */
+    display: flex; 
+    flex-wrap: wrap; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for containers */
+}
+
+/* Images */
+img {
+    width: 40%;
+    border-radius: 10px; 
+    height: 300px; /* Default height */
+    border: 2px solid #005580; /* Border color for images */
+}
+
+/* Specific Image Styles */
+.container2 img {
+    float: right;
+    margin: 80px 20px 20px 35px;
+}
+
+.container3 img {
+    float: left;
+    margin: 80px 35px 20px 20px; 
+}
+
+.container4 img {
+    float: right;
+    margin: 90px 20px 20px 35px; 
+}
+
+.container5 img {
+    float: left;
+    margin: 90px 35px 20px 20px; 
+}
+
+.container6 img {
+    float: right;
+    margin: 90px 20px 20px 35px; 
+    height: 310px; /* Specific height */
+}
+
+.container7 img {
+    float: left;
+    margin: 100px 35px 20px 20px;
+    height: 330px; /* Specific height */
+    width: 490px; 
+}
+
+/* Headings */
+h1, h2 {
+    text-align: center; 
+}
+
+h1 {
+    color: #003366; /* Dark blue for main heading */
+}
+
+h2 {
+    color: #005580; /* Darker teal for section headings */
+    margin-top: 20px; 
+    border-bottom: 2px solid #005580; /* Underline for headings */
+    padding-bottom: 10px; /* Spacing under headings */
+}
+
+/* Paragraphs */
+p {
+    text-align: justify; 
+    color: #333333; /* Dark gray for text */
+}
