@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: content-box;
+}
+
+body {
+  background-color: var(--white);
+  font-family: "Nunito", Arial, Helvetica, sans-serif;
+  position: relative;
+}
+
+main {
+  margin: 85px 0 0 0; /* Top margin set to 60px to stop from going under the nav bar */
+  max-width: 100%; /*Overwrite max width in global css*/
+  display: flex;
+  flex-direction: column;
+  color: var(--black);
+  gap: 64px;
+}
+
+hr {
+  border: 2px solid var(--black);
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 24px;
+}
+
+main h1 {
+  font-weight: 900;
+}
+
+main p {
+  font-size: 1.3em;
+  line-height: 1.25em;
+}
+
+/*Content margin*/
+.s_cont_margin {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+
+#section-1 h1 {
+  text-align: center;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  margin-bottom: 24px;
+}
+
+#s1-div1 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 900px;
+}
+
+#s1-div1 ul {
+  list-style-type: disc; /* or circle, square, etc. */
+  padding-left: 20px; /* Add some padding */
+}
+
+#s1-div1 li {
+  margin: 5px 0; /* Add margin between list items */
+}
+
+#s1-div2 {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+  font-size: var(--text-m);
+}
+
+#s1-div2 ul {
+  list-style-type: none;
+}
