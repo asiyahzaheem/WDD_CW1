@@ -92,6 +92,7 @@ html {
 body {
     font-family: "Nunito", Helvetica, sans-serif !important;
     background-color: var(--white);
+    margin: 0;
 }
 
 /* main {
