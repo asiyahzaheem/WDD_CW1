@@ -123,6 +123,7 @@ header #logo{
   height: 60px;
 }
 
+/*----------Nav----------*/
 nav {
   width: auto;
   overflow-x: auto;
@@ -143,11 +144,11 @@ nav ul {
 
 nav li {
   display: inline;
-  background-color: #f5f5f5;
+  background-color: var(--white);
 }
 
 nav a {
-  color: #1c1c1c;
+  color: var(--black);
   font-size: 1.25em;
   font-weight: 600;
   text-decoration: none;
@@ -196,7 +197,7 @@ nav a.active {
 }
 
 #profile_logo{
-  background-image: url("../images/nav/user-profile-icon.svg");
+  background-image: url("../images/global/user-profile-icon.svg");
   background-size: cover;
   width: 28px;
   height: 28px;
@@ -205,37 +206,39 @@ nav a.active {
 /*----------Footer----------*/
 
 .footer {
-  background-color: transparent; /* Make the background transparent */
-  color: #ffffff;
-  padding-bottom: 0; /* Ensure no padding at the bottom */
-  position: relative;
+  background-color: var(--black);
+  height: 200px;
+  width: 100%;
+  color: var(--white);
+  margin-top: 24px;
+  text-align: center;
 }
 
 .footer_content {
   display: flex;
   justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
   width: 90%;
   padding: 12px 0;
-  position: absolute; /* Position it absolutely */
-  bottom: 15px; /* Adjust as needed */
-  left: 50%;
-  transform: translateX(-50%); /* Center the footer content */
+}
+
+.footer_content div{
+  transform: translateX(-36px);
+}
+
+.footer hr {
+  border: 1px solid var(--white);
+  margin: 10px auto;
+  border-radius: 24px;
 }
 
 .footer a {
-  color: #ffffff; /* Link color */
-  text-decoration: none; /* Remove underline */
+  color: var(--white); 
+  text-decoration: none;
+  padding: 10px 0;
 }
 
 .footer a:hover {
-  text-decoration: underline; /* Underline on hover */
-}
-
-/* Ensure SVG is flush with the footer */
-svg {
-  display: block;
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
-  width: 100%;
-  height: auto;
+  text-decoration: underline;
 }
