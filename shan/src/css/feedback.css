@@ -25,9 +25,10 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 120vh;
+  height: 145vh;
 }
 
 /*----------Main----------*/
