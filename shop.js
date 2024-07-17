@@ -108,7 +108,7 @@ async function displayProducts(productsData) {
             const productHTML = `
             <div class="product" data-product-id="${productData.id}">
                     <div class="product-img">
-                        <img src="src/images/${productData.image}" alt="Product 1"/>
+                        <img src="src/images/${productData.image}" alt="Product image of ${productData.title}"/>
                     </div>
                     <div class="product-content">
                         <div class="main">
@@ -163,7 +163,7 @@ function openModal(productData) {
     modalEl.style.display = "block"
     var modalHTML = `
         <div class="modal-image">
-            <img src="src/images/${productData.image}" alt="Product ${productData.id}"/>
+            <img src="src/images/${productData.image}" alt="Product image of ${productData.title}"/>
         </div>
         <div class="modal-info">
             <div class="main-content">
@@ -248,10 +248,10 @@ function closeModal() {
     modalEl.style.display = "none";
 }
 
-// must take in { productid, options chosen etc }
 function displayCartItem() {
     const {products, totalQty, totalPrice, shippingFee} = fetchLocalStorage();
     const cartSubtotalEl = document.getElementById("cartSubtotal")
+    const cartQtyEl = document.getElementById("cartQty")
     const cartShippingEl = document.getElementById("cartShipping")
     const cartTotalEl = document.getElementById("cartTotal")
     const cartHeaderEl = document.getElementById("cartHeader");
@@ -284,7 +284,7 @@ function displayCartItem() {
         const cartItemHTML = `
             <div class="cart-item" data-id=${productData.id}>
                 <div class="image">
-                    <img src="src/images/${productData.image}" alt="Product 1" />
+                    <img src="src/images/${productData.image}" alt="Product image of ${productData.title}" />
                 </div>
                 <div class="content">
                     <div class="row">
@@ -318,7 +318,7 @@ function displayCartItem() {
         });
     });
 
-
+    cartQtyEl.innerText = `${totalQty} items`;
     cartSubtotalEl.innerText = `$${totalPrice}`;
     cartShippingEl.innerText = `$${shippingFee}`;
     cartTotalEl.innerText = `$${(totalPrice + shippingFee)}`;
@@ -531,12 +531,24 @@ function removeFromCart(data, target) {
 // selected on first color and size in moda !!
 // filter buttons !!
 // stop user from manually entering in input number
-
-// get cart to slide
-// if productModal and cartModal are open, close productModal when cartModal is closed
-// back to shop in checkout page
-// checkout processing
-// dislay qty of items in cart
+// back to shop in checkout page !!
 // indicate mandotary fields
-// validdation checks
+// dislay qty of items in cart
+// checkout processing
 // basck to the top button in content page
+// arrow in contetn as html entity
+// alt images 
+// compress iamges
+
+// validdation checks
+
+
+// fix laoder
+// restrict access to checkout page
+// alt images
+// changes text sizes
+
+// team member images
+// get checkout info from LS
+// color palette
+// add footer and nav

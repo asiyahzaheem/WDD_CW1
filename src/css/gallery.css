@@ -115,3 +115,25 @@ main {
     font-size: 1.6rem;
     color: #777;
 }
+
+.waveLayer {
+    position: relative;
+    aspect-ratio: 900/450;
+    width: 100%;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    background-image: url("../svg/wave-haikei-5.svg");
+}
+
+
+
+.footer-content {
+    position: absolute;
+    background-color: aqua;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
