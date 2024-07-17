@@ -3,32 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/css/style.css" />
+    <link rel="stylesheet" href="src/css/feedback.css" />
     <link rel="stylesheet" href="src/css/nav.css" />
-    <link rel="stylesheet" href="src/css/feedback.css">
-    <title>NGO</title>
+    <title>Feedback Form</title>
   </head>
   <body>
     <!-- Header -->
     <header>
-      <div><img src="src/images/logo.png" alt="logo.png" id="logo"></div>
+      <div><img src="src/images/logo.png" alt="logo.png" id="logo" /></div>
       <nav>
         <ul>
           <li><a href="home.html">Home</a></li>
           <li><a href="gallery.html">Gallery</a></li>
           <li><a href="shop.html">Shop</a></li>
           <li><a href="#team">Team</a></li>
-          <li><a href="#feedback" class="active">Feedback</a></li>
+          <li><a href="feedback.html" class="active">Feedback</a></li>
         </ul>
       </nav>
       <div class="nav_profile_container">
         <div class="nav_profile" onclick="window.location.href='profile.html'">
           <span>Profile</span>
-          <span id="profile_logo"></span>
+          <i id="profile_logo"></i>
         </div>
       </div>
     </header>
     <main class="s_cont_margin">
-        <form>
-            
-        </form>
+      <h1>Feedback Form</h1>
+      <form>
+          <label for="name">Name: </label>
+          <input type="text" name="text" placeholder="Enter Name">
+      </form>
     </main>
+  </body>
+</html>
