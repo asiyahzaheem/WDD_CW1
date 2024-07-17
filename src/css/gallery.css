@@ -51,8 +51,8 @@ main {
 }
 
 .photo img:hover {
-    transform: scale(1.1);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
     cursor: pointer;
 }
 
@@ -108,16 +108,15 @@ main {
 .image-preview-container .preview .description {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Align text to the top */
     width: 40%; /* Limit width to the remaining 40% */
     float: right;
-    margin-top: -25rem; /* Add some top margin for spacing */
+    margin-top: -25.5rem; /* Add some top margin for spacing */
 }
 
 .image-preview-container .preview .description h3 {
     color: #444;
     margin: 0;
-    padding: 0.5rem 0;
+    padding: 0.5rem 0 0 0.5rem;
     font-size: 2rem; /* Adjusted font size */
 }
 
@@ -128,4 +127,22 @@ main {
     font-size: 1.2rem; /* Adjusted font size */
     color: #777;
     
+}
+
+.image-preview-container .preview .description .customization {
+    padding: 0 2rem;
+    font-size: 1.1rem; /* Adjusted font size */
+    color: #444;
+    margin-top: 1rem; /* Added top margin for spacing */
+}
+
+.image-preview-container .preview .description .customization label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.image-preview-container .preview .description .customization select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: -1rem;
 }
