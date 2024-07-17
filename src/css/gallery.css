@@ -160,7 +160,7 @@ main {
     width: 90%;
     padding: 12px 0;
     position: absolute; /* Position it absolutely */
-    bottom: 10px; /* Adjust as needed */
+    bottom: 35px; /* Adjust as needed */
     left: 50%;
     transform: translateX(-50%); /* Center the footer content */
 }
