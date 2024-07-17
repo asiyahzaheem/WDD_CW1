@@ -236,5 +236,6 @@ svg {
   display: block;
   margin: 0; /* Remove default margin */
   padding: 0; /* Remove default padding */
+  width: 100%;
+  height: auto;
 }
-
