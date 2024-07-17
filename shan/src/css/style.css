@@ -148,7 +148,7 @@ nav li {
 }
 
 nav a {
-  color: #1c1c1c;
+  color: var(--black);
   font-size: 1.25em;
   font-weight: 600;
   text-decoration: none;
