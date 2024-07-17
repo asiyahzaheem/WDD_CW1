@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+h1 {
+    text-align: center;
+    padding-top: 15px;
+    font-family: "Nunito", Helvetica, sans-serif;
+}
+
+svg {
+    width: 100%;
+    height: auto;
+}
+rect {
+    fill: #d0e7f9;
+    stroke: #004080;
+    stroke-width: 2;
+}
+
+text {
+    cursor: pointer;
+    fill: #004080;
+}
+
+.line {
+    fill: none;
+    stroke: #666666;
+    stroke-width: 2;
+}
+
+g:hover rect {
+    fill: #b8e986;
+    cursor: pointer;
+}

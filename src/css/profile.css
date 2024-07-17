@@ -1,64 +1,250 @@
-body {
-    background-image: url('turtle-1.jpg'); /* Make sure this path is correct */
-    background-size: cover; /* Ensure the image covers the entire screen */
-    background-repeat: no-repeat; /* Prevent the image from tiling */
-    background-position:top; /* Center the image */
-    font-family: 'Roboto', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0; /* Remove default margin */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+:root{/*css variable declaration to be used with styling*/
+    --main-color:#2e6886;
+    --secondary-color:#71accb;
+    --lighter-color:#bbe9ff;
+    --light-color:#547483;
+    --dark-color:#3f3e43;
+    --font-small:14px;
+    --font-big:20px;
 }
 
-h1 {
-    text-align: center;
-    padding-top: 20px; /* Adjust padding to reduce space */
-    font-size: 45px;
-    margin-top: 0; /* Ensure no margin at the top */
-    color: white;
+*{
+    margin: 0;
+    padding: 0;
 }
 
-h4 {
-    text-align: center;
+*,::before,::after {/*to be searched about*/
+    box-sizing: border-box;
 }
 
-.login-box {
-    width: 800px;
-    height: auto;
-    background-color:lightcyan; /* Slightly opaque background */
-    border-radius: 50px;
-    padding: 20px; /* Adjust padding for better look */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add some shadow for better visual */
+html {
+    scroll-behavior: smooth;
 }
 
-form {
+body{
+    font-family: 'Nunito',sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
+    color: var(--dark-color);
+    background: var(--dark-color);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+h1,h2,h3 {
+    font-weight: 700;
+    line-height: 1.25;
+    margin:0 0 0.5em ;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+ .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding:0 2em ;
+ }
+
+ .form-box {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 100%; /* Make form take the full width of the login box */
-}
+    margin-top: 5em;
+    border: 8px solid var(--light-color);
+    border-radius: 15px;
+    background-color:#faf9ff ;
+ }
 
-form input {
-    width: 80%; /* Adjust the width as needed */
-    margin-top: 20px;
-    font-size: 30px;
-    padding: 10px; /* Add padding for better look */
-    border-radius: 10px; /* Rounded corners */
-    border: 1px solid #ccc; /* Optional: Add border */
-    box-sizing: border-box; /* Ensure padding is included in width */
-}
+ .form-box .progress {/*search about this*/
+    position: relative;
+    padding: 1em;
+    width: 600px;
+ }
 
-p {
+ .logo {
+    font-size: 1.75em;
+    font-weight: 800;
+    columns: var(--dark-color);
+    padding: 65px 48px;
     text-align: center;
-    margin-top: 20px; /* Add some space between inputs and the paragraph */
-}
+ }
 
-p a {
-    color: #007bff; /* Optional: Change link color */
-    text-decoration: none; /* Remove underline from link */
-}
+ .logo span{
+    color: var(--main-color);
+ }
 
-p a:hover {
-    text-decoration: underline; /* Add underline on hover */
+  
+.progress ul.progress-steps {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    font: size 15px;;
+ }
+ 
+ .progress ul.progress-steps li{
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2em;
+ }
+
+ .progress ul.progress-steps li >span {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    font-size: var(--font-small);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1em;
+    border-radius: 50%;
+    background-color: var(--lighter-color);
+    z-index: 1;
+ }
+
+ .progress ul.progress-steps li.active >span {
+    color: white;
+    background: var(--main-color);
+    border: 4px solid var(--secondary-color) ;
+    z-index: 1;
+ }
+
+ .form-box form {
+    width: 100%;
+    padding: 3em 1em;
+    background-color: white;
+    border-radius: 30px 30px 15px 15px;
+ }
+
+ form > div {
+    max-width:  400px; 
+    margin: 0 auto;
+ }
+
+ form >div p {
+    color: var(--main-color);
+    margin-bottom: 2em;
+ }
+
+ form >div >div:not(.checkbox) {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+ }
+
+ form :where(input,select){
+    height: 30px;
+    padding: 0 1em;
+    border-radius: 7px;
+    outline-color: var(--secondary-color);
+    border: 1px solid var(--lighter-color);
+    background-color: transparent;
+ }
+
+ form label {
+    font-size: var(--font-small);
+    margin-bottom: 0.5em;
+    font-weight:  600px; ;
+ }
+
+ form .grouping {
+    display:flex;
+ }
+
+ form .grouping input{
+    max-width:70px;
+    text-align: center;
+    margin-right: 1em;
+ }
+
+ form.checkbox input{
+    height: auto;
+ }
+
+ .form-two,.form-three, .form-four{
+    display: none;
+ }
+
+ .button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    margin-top: 2em;
+ }
+
+ .button-group [class*="btn-"] { /*try to understand this*/
+    background-color: var(--main-color);
+    color: white;
+    padding: 0.5em 2.5em;
+    border: 4px solid var(--secondary-color);
+    border-radius: 30px;
+    cursor: pointer;
+    -webkit-transition:background-color .3s,border-color .3s ease-out;/*try to understand this*/
+    transition:background-color .3s,border-color .3s ease-out;/*try to understand this*/
+ }
+
+ .button-group [class*="btn-"]:disabled {/*try to understand this*/
+    background-color: var(--light-color);
+    border-color: var(--lighter-color);
+    cursor: text;
+ }
+
+ .button-group [class*="btn-"]:hover:not(:disabled){
+    background-color: var(--dark-color);
+    border-color:var(--light-color);
+ }
+
+::placeholder {
+    color: var(--light-color);
+    
 }
+ @media screen and (min-width: 768px){/*search about this*/
+    .form-box {
+        flex-direction: row;
+    }
+
+    .form-box.progress{
+        flex:1 0 35%;
+        min-width: 300px;
+        padding: 3em;
+    }
+    .logo {
+        margin: -48px -48px 48px;
+    }
+    .progress ul.progress-steps{
+        flex-direction: column;
+        gap: 0;
+    }
+    .progress ul.progress-steps li:not(:last-child)::before{
+        content: '';
+        position: absolute;
+        left:17px;
+        top:38px;
+        width:2px;
+        height: 33px;;
+        background-color:var(--lighter-color);
+    }
+    .form-box form {
+        padding: 3em;
+        border-radius: 0 25px 15px 0;
+    }
+
+
+ }
+    
+ 
+    
+ 

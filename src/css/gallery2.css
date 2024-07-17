@@ -79,7 +79,8 @@ main {
     background: #ffffff;
     position: relative;
     margin: 2rem;
-    width: 45rem; /* Increased width for larger preview */
+    width: 40rem; /* Increased width for larger preview */
+    height: 580px;
     border-radius: 10px;
 }
 
