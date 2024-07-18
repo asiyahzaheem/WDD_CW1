@@ -23,18 +23,19 @@
                 padding: 0 ;
                 box-sizing: border-box;
             }
-            
-            html {
-                font-size: 62.5%;
-            }
+
             
             body {
                 background-image: url('src/images/page_editor/backgroundImg.png');
-                background-size:cover;
+                background-size: cover;
                 background-repeat: no-repeat;
                 background-position: center;
                 font-family: "Poppins", Helvetica, sans-serif !important;
                 color: var(--black);
+            }
+            
+            a {
+                text-decoration: none;
             }
             
             .container {
@@ -43,49 +44,50 @@
             }
             
             .header {
-                padding: 4.8rem 0;
+                padding: 48px 0; 
             }
+            
             .header .title {
                 font-family: "Cormorant Garamond", Helvetica, sans-serif;
-                font-size: 12.8rem;
+                font-size: 128px; 
                 font-weight: 300;
             }
             
             .subtitle {
-                font-size: 2.4rem;
+                font-size: 24px; 
                 font-weight: 500;
             }
             
             .role {
-                font-size: 2rem;
+                font-size: 20px; 
                 text-transform: uppercase;
                 font-weight: 600;
                 letter-spacing: 2px;
             }
             
             .recent {
-                max-width:fit-content;
+                max-width: fit-content;
                 margin-left: auto;
-                font-size: 5.2rem;
+                font-size: 52px;
                 font-weight: 500;
-                letter-spacing: 0.5rem;
+                letter-spacing: 5px;
                 text-transform: uppercase;
                 line-height: 0.72;
-                margin-bottom: 3.2rem;
+                margin-bottom: 32px;
             }
+            
             .work {
                 display: flex;
                 flex-direction: column;
-                gap: 1.2rem;
-                
-                margin-bottom: 3.2rem;
+                gap: 12px;
+                margin-bottom: 32px;
             }
             
             .work-item {
                 display: flex;
                 align-items: start;
                 justify-content: space-between;
-                padding: 0.8rem 0;
+                padding: 8px 0;
             }
             
             hr {
@@ -93,33 +95,35 @@
                 background-color: var(--black);
                 height: 2px;
                 border-width: 0;
-                margin: 0.8rem 0;
+                margin: 8px 0;
             }
+            
             .work-item .arrowImg {
                 width: 20px;
             }
             
             .work-item .title {
                 max-width: 30%;
-            
             }
             
             .work-item .title a {
                 height: 20px;
             }
+            
             .work-item .title span {
                 text-transform: uppercase;
                 letter-spacing: 2px;
-                font-size: 2.2rem;
+                font-size: var(--text-l);
+                color: var(--black);
             }
             
             .work-item .content {
                 display: flex;
-                justify-content: end;
+                justify-content: flex-end;
                 max-width: 50% !important;
-                gap: 3.2rem;
-            
+                gap: 32px;
             }
+            
             .work-item .image {
                 max-width: 40%;
             }
@@ -132,6 +136,7 @@
                 max-width: 40%;
                 font-size: var(--text-s);
             }
+            
         </style>
 
     </head>
@@ -141,7 +146,7 @@
             <div class="header">
                 <p class="role">Student Role: 01</p>
                 <p class="title">Hi, I'm Asiyah.</p>
-                <p class="subtitle">here is my work (i guess)</p>
+                <p class="subtitle">here is my work!</p>
             </div>
 
             <p class="recent">Recent<br>Work.</p>
@@ -149,8 +154,8 @@
                 <hr>
                 <div class="work-item">
                     <div class="title">
-                        <span>Save the reefs splash screen</span>
-                        <a href="../splash.html" target="_blank">
+                        <a href="splash.html" target="_blank">
+                            <span>Save the reefs splash screen</span>
                             <img class="arrowImg" src="src/images/page_editor/up-right-arrow.png" alt="Icon of arrow pointing top-right"/>
                         </a>
                     </div>
@@ -168,8 +173,8 @@
 
                 <div class="work-item">
                     <div class="title">
-                        <span>Shop - Product Showcase</span>
-                        <a href="../shop.html" target="_blank">
+                        <a href="shop.html" target="_blank">
+                            <span>Shop - Product Showcase</span>
                             <img class="arrowImg" src="src/images/page_editor/up-right-arrow.png" alt="Icon of arrow pointing top-right"/>
                         </a>
                     </div>
@@ -187,8 +192,8 @@
 
                 <div class="work-item">
                     <div class="title">
-                        <span>Shop - Product Cart</span>
-                        <a href="../splash.html" target="_blank">
+                        <a href="shop.html" target="_blank">
+                            <span>Shop - Product Cart</span>
                             <img class="arrowImg" src="src/images/page_editor/up-right-arrow.png" alt="Icon of arrow pointing top-right"/>
                         </a>
                     </div>
@@ -206,8 +211,8 @@
 
                 <div class="work-item">
                     <div class="title">
-                        <span>Shop - Checkout Summary</span>
-                        <a href="../splash.html" target="_blank">
+                        <a href="shop.html" target="_blank">
+                            <span>Shop - Checkout Summary</span>
                             <img class="arrowImg" src="src/images/page_editor/up-right-arrow.png" alt="Icon of arrow pointing top-right"/>
                         </a>
                     </div>
@@ -225,8 +230,8 @@
 
                 <div class="work-item">
                     <div class="title">
-                        <span>Save the Reefs Logo</span>
-                        <a href="../splash.html" target="_blank">
+                        <a href="splash.html" target="_blank">
+                            <span>Save the Reefs Logo</span>
                             <img class="arrowImg" src="src/images/page_editor/up-right-arrow.png" alt="Icon of arrow pointing top-right"/>
                         </a>
                     </div>
@@ -242,5 +247,28 @@
                 
             </div>
         </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer_content">
+            <div>
+                <h3>Contact Us</h3>
+                <hr />
+                <address>Email : <a href="mailto:asiyah.20233158@iit.ac.lk">asiyah.20233158@iit.ac.lk</a></address>
+            </div>
+            <div>
+                <h3>Main Links</h3>
+                <hr />
+                <a href="splash.html">Splash Screen</a><br />
+                <a href="shop.html">Shop</a><br />
+            </div>
+            <div>
+                <h3>Other Links</h3>
+                <hr />
+                <a href="contentpage_1.html">Content Page</a><br>
+                <a href="pageeditor_1.html">Editor page</a>
+            </div>
+            </div>
+        </footer>
     </body>
 </html>

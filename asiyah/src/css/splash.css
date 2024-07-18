@@ -15,7 +15,9 @@ main {
     margin: 0;
 }
 
-/* Wave SVG */
+/* --------------------------------- */
+/* ------------- WAVE SVG ------------- */
+/* --------------------------------- */
 
 main {
     background-image: url('../images/splash/splashScreen.jpg'); 
@@ -34,6 +36,10 @@ main {
     overflow: hidden;
     background-image: url("../images/splash/wave.svg");
 }
+
+/* --------------------------------- */
+/* ------------- CONTENT ------------- */
+/* --------------------------------- */
 
 .splash-screen {
     opacity: 1;
@@ -86,6 +92,10 @@ main {
     justify-content: space-between;
 }
 
+/* --------------------------------- */
+/* ------------- TEAM MEMBERS ------------- */
+/* --------------------------------- */
+
 .team_member {
     display: flex;
     flex-direction: column;
@@ -109,6 +119,10 @@ main {
     color: var(--darkTeal-1);
     margin-bottom: 0.4rem;
 }
+
+/* --------------------------------- */
+/* ------------- LOADER ------------- */
+/* --------------------------------- */
 
 .loader-container {
     z-index: 9999;
