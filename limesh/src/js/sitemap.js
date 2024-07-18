@@ -9,14 +9,14 @@ const pages = [
     { id: 'groupId7', url: '/venuja/team.html' },
     { id: 'groupId8', url: '/shan/feedback.html' },
 
-    { id: 'groupId10', url: 'contentpage_1.html' },
-    { id: 'groupId11', url: 'contentpage_2.html' },
-    { id: 'groupId12', url: 'contentpage_3.html' },
+    { id: 'groupId10', url: '/asiyah/contentpage_1.html' },
+    { id: 'groupId11', url: '/shan/contentpage_2.html' },
+    { id: 'groupId12', url: '/venuja/contentpage_3.html' },
     { id: 'groupId13', url: 'contentpage_4.html' },
 
-    { id: 'groupId14', url: 'editorpage_1.html' },
-    { id: 'groupId15', url: 'editorpage_2.html' },
-    { id: 'groupId16', url: 'editorpage_3.html' },
+    { id: 'groupId14', url: '/asiyah/editorpage_1.html' },
+    { id: 'groupId15', url: '/shan/editorpage_2.html' },
+    { id: 'groupId16', url: '/venuja/editorpage_3.html' },
     { id: 'groupId17', url: 'editorpage_4.html' },
 
 ];
