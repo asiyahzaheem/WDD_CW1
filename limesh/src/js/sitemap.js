@@ -1,3 +1,4 @@
+// Declare object array 
 const pages = [
     { id: 'groupId1', url: 'splash.html' },
     { id: 'groupId2', url: 'login.html' },
@@ -22,6 +23,6 @@ const pages = [
 
 pages.forEach(page => {
     document.getElementById(page.id).addEventListener('click', function() {
-        window.location.href = page.url;
+        window.location.href = page.url; // Redirect to the clicked page
     });
 });
