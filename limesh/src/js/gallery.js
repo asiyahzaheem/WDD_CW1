@@ -1,4 +1,5 @@
-const previewContainer = document.querySelector(".image-preview-container");
+// Declare constants
+const previewContainer = document.querySelector(".image-preview-container"); 
 const previewBoxes = previewContainer.querySelectorAll(".preview");
 const productImages = document.querySelectorAll(".photo");
 
@@ -26,20 +27,20 @@ const generateCustomizationHTML = () => {
 
 // Append customization HTML to each preview
 previewBoxes.forEach((preview) => {
-  const description = preview.querySelector(".description");
+  const description = preview.querySelector(".description"); // Get the description element
   if (description) {
-    description.insertAdjacentHTML("beforeend", generateCustomizationHTML());
+    description.insertAdjacentHTML("beforeend", generateCustomizationHTML());  // Insert the customization HTML
 
     // Add event listeners for customization changes
     const colorSelect = description.querySelector("#color");
     const fontSelect = description.querySelector("#font");
 
     colorSelect.addEventListener("change", (e) => {
-      preview.style.backgroundColor = e.target.value;
+      preview.style.backgroundColor = e.target.value; // Set the background color of the preview
     });
 
     fontSelect.addEventListener("change", (e) => {
-      description.style.fontFamily = e.target.value;
+      description.style.fontFamily = e.target.value; // Set the font family of the description
     });
   }
 });
@@ -47,21 +48,21 @@ previewBoxes.forEach((preview) => {
 productImages.forEach((photo) => {
   photo.addEventListener("click", () => {
     const name = photo.getAttribute("data-name");
-    previewContainer.style.display = "flex";
+    previewContainer.style.display = "flex"; // Show the preview container
     previewBoxes.forEach((preview) => {
       if (preview.getAttribute("data-target") === name) {
-        preview.classList.add("active");
+        preview.classList.add("active"); // Add the active class to the preview
       } else {
-        preview.classList.remove("active");
+        preview.classList.remove("active"); // Remove the active class from other previews
       }
     });
   });
 });
 
 previewBoxes.forEach((preview) => {
-  const closeBtn = preview.querySelector(".close-btn");
+  const closeBtn = preview.querySelector(".close-btn"); // Get the close button element
   closeBtn.addEventListener("click", () => {
-    preview.classList.remove("active");
-    previewContainer.style.display = "none";
+    preview.classList.remove("active"); // Remove the active class from the preview
+    previewContainer.style.display = "none"; // Hide the preview container
   });
 });
