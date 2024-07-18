@@ -11,7 +11,7 @@
 body {
     font-family: 'Nunito', sans-serif;
     text-align: center;
-    background-color: #e4f6ff;
+    background:var(--white);
     margin: 0;
     padding-bottom: 80px; /* Make space for the footer */
 }
@@ -26,6 +26,7 @@ h1 {
     font-weight: bolder;
     font-size: 2.5em; /* Make h1 larger */
     color: #333; /* Add color to make it stand out */
+    background-color: #5ed8e3fe;
 }
 
 h2 {
