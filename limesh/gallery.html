@@ -7,21 +7,29 @@
     <link rel="stylesheet" href="src/css/gallery.css" />
     <title>Gallery</title>
   </head>
-  
+
   <body>
     <!-- Header -->
     <header>
-      <div><img src="src/images/global/logo.png" alt="logo.png" id="logo" /></div>
+      <div>
+        <img
+          src="src/images/global/logo.png" alt="logo.png - Asiyah Zaheeem" id="logo" />
+      </div>
       <nav>
         <ul>
           <li><a href="home.html">Home</a></li>
           <li><a href="gallery.html" class="active">Gallery</a></li>
           <li><a href="shop.html">Shop</a></li>
-          <li><a href="#team">Team</a></li>
-          <li><a href="#feedback">Feedback</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
         </ul>
       </nav>
-      <div></div>
+      <div class="nav_profile_container">
+        <div class="nav_profile" onclick="window.location.href='profile.html'">
+          <span>Profile</span>
+          <i id="profile_logo"></i>
+        </div>
+      </div>
     </header>
 
     <!-- Main -->
@@ -30,31 +38,31 @@
         <h2 class="gallery_title">Gallery</h2>
         <div class="grid">
           <div class="photo" data-name="p-1">
-            <img src="src/images/gallery/img1.jpg" alt="image 1" />
+            <img src="src/images/gallery/img1.jpg" alt="image of turtle" />
           </div>
           <div class="photo" data-name="p-2">
-            <img src="src/images/gallery/img2.jpg" alt="image 2" />
+            <img src="src/images/gallery/img2.jpg" alt="image of coral reef" />
           </div>
           <div class="photo" data-name="p-3">
-            <img src="src/images/gallery/img3.jpg" alt="image 3" />
+            <img src="src/images/gallery/img3.jpg" alt="image of whale" />
           </div>
           <div class="photo" data-name="p-4">
-            <img src="src/images/gallery/img4.jpg" alt="image 4" />
+            <img src="src/images/gallery/img4.jpg" alt="image blueface angelfish" />
           </div>
           <div class="photo" data-name="p-5">
-            <img src="src/images/gallery/img5.jpg" alt="image 5" />
+            <img src="src/images/gallery/img5.jpg" alt="image of underwater cave" />
           </div>
           <div class="photo" data-name="p-6">
-            <img src="src/images/gallery/img6.jpg" alt="image 6" />
+            <img src="src/images/gallery/img6.jpg" alt="image of Alcyonacea" />
           </div>
           <div class="photo" data-name="p-7">
-            <img src="src/images/gallery/img7.jpg" alt="image 7" />
+            <img src="src/images/gallery/img7.jpg" alt="image of divers cleaning underwater" />
           </div>
           <div class="photo" data-name="p-8">
-            <img src="src/images/gallery/img8.jpg" alt="image 8" />
+            <img src="src/images/gallery/img8.jpg" alt="image of beach cleaning" />
           </div>
           <div class="photo" data-name="p-9">
-            <img src="src/images/gallery/img9.jpg" alt="image 9" />
+            <img src="src/images/gallery/img9.jpg" alt="image of beach cleaning" />
           </div>
         </div>
       </div>
@@ -64,7 +72,7 @@
     <div class="image-preview-container">
       <div class="preview" data-target="p-1">
         <span class="close-btn">&times;</span>
-        <img src="src/images/gallery/img1.jpg" alt="image 1" />
+        <img src="src/images/gallery/img1.jpg" alt="image of turtle" />
         <div class="description">
           <h3>Turtles</h3>
           <p>
@@ -78,7 +86,7 @@
       </div>
       <div class="preview" data-target="p-2">
         <span class="close-btn">&times;</span>
-        <img src="src/images/gallery/img2.jpg" alt="image 2" />
+        <img src="src/images/gallery/img2.jpg" alt="image of coral reef" />
         <div class="description">
           <h3>Coral Reefs</h3>
           <p>
@@ -91,7 +99,7 @@
       </div>
       <div class="preview" data-target="p-3">
         <span class="close-btn">&times;</span>
-        <img src="src/images/gallery/img3.jpg" alt="image 3" />
+        <img src="src/images/gallery/img3.jpg" alt="image of whale" />
         <div class="description">
           <h3>Image of Whale Swimming</h3>
           <p>
@@ -105,7 +113,7 @@
       </div>
       <div class="preview" data-target="p-4">
         <span class="close-btn">&times;</span>
-        <img src="src/images/gallery/img4.jpg" alt="image 4" />
+        <img src="src/images/gallery/img4.jpg" alt="image of blueface angelfish" />
         <div class="description">
           <h3>Blueface angelfish</h3>
           <p>
@@ -119,7 +127,7 @@
       </div>
       <div class="preview" data-target="p-5">
         <span class="close-btn">&times;</span>
-        <img src="src/images/gallery/img5.jpg" alt="image 5" />
+        <img src="src/images/gallery/img5.jpg" alt="image of underwater cave" />
         <div class="description">
           <h3>Underwater Cave</h3>
           <p>
@@ -132,7 +140,7 @@
       </div>
       <div class="preview" data-target="p-6">
         <span class="close-btn">&times;</span>
-        <img src="src/images/gallery/img6.jpg" alt="image 6" />
+        <img src="src/images/gallery/img6.jpg" alt="image of Alcyonacea" />
         <div class="description">
           <h3>Alcyonacea</h3>
           <p>
@@ -146,7 +154,7 @@
       </div>
       <div class="preview" data-target="p-7">
         <span class="close-btn">&times;</span>
-        <img src="src/images/gallery/img7.jpg" alt="image 7" />
+        <img src="src/images/gallery/img7.jpg" alt="image of divers cleaning underwater" />
         <div class="description">
           <h3>Divers Cleaning Underwater</h3>
           <p>
@@ -159,7 +167,7 @@
       </div>
       <div class="preview" data-target="p-8">
         <span class="close-btn">&times;</span>
-        <img src="src/images/gallery/img8.jpg" alt="image 8" />
+        <img src="src/images/gallery/img8.jpg" alt="image of beach cleaning" />
         <div class="description">
           <h3>Beach Cleaning</h3>
           <p>
@@ -172,7 +180,7 @@
       </div>
       <div class="preview" data-target="p-9">
         <span class="close-btn">&times;</span>
-        <img src="src/images/gallery/img9.jpg" alt="image 9" />
+        <img src="src/images/gallery/img9.jpg" alt="image of beach cleaning" />
         <div class="description">
           <h3>Beach Cleaning</h3>
           <p>
@@ -184,30 +192,28 @@
           <div class="customization"></div>
         </div>
       </div>
-    </div><br><br>
+    </div>
+    <br /><br />
 
     <!-- Footer -->
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-      <path fill="#0c0d0d" fill-opacity="1" d="M0,150C360,190,720,110,1080,150C1260,170,1440,150,1440,150L1440,320L0,320Z"></path>
-    </svg>
     <footer class="footer">
       <div class="footer_content">
         <div>
           <h3>Contact Us</h3>
-          <hr>
-          <a href="#">Email</a><br>
-          <a href="#">Phone</a>
+          <hr />
+          <address>Email : <a href="mailto:limesh.20230793@iit.ac.lk">limesh.20230793@iit.ac.lk</a></address>
+          <p>Phone : <a href="tel:+94775474318">+94 77 54 74 318</a></p>
         </div>
         <div>
           <h3>Main Links</h3>
-          <hr>
-          <a href="sitemap.html">Sitemap</a><br>
+          <hr />
+          <a href="sitemap.html">Sitemap</a><br />
         </div>
         <div>
           <h3>Other Links</h3>
-          <hr>
-          <a href="#">Content page</a><br>
-          <a href="#">Editor page</a>
+          <hr />
+          <a href="contentpage_4.html">Content Page</a><br>
+          <a href="editorpage_4.html">Editor page</a>
         </div>
       </div>
     </footer>

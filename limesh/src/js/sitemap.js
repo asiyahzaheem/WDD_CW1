@@ -6,7 +6,18 @@ const pages = [
     { id: 'groupId5', url: 'gallery.html' },
     { id: 'groupId6', url: 'shop.html' },
     { id: 'groupId7', url: 'team.html' },
-    { id: 'groupId8', url: 'feedback.html' }
+    { id: 'groupId8', url: 'feedback.html' },
+
+    { id: 'groupId10', url: 'contentpage_1.html' },
+    { id: 'groupId11', url: 'contentpage_2.html' },
+    { id: 'groupId12', url: 'contentpage_3.html' },
+    { id: 'groupId13', url: 'contentpage_4.html' },
+
+    { id: 'groupId14', url: 'editorpage_1.html' },
+    { id: 'groupId15', url: 'editorpage_2.html' },
+    { id: 'groupId16', url: 'editorpage_3.html' },
+    { id: 'groupId17', url: 'editorpage_4.html' },
+
 ];
 
 pages.forEach(page => {

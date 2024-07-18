@@ -3,139 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="test.css">
-    <script src="src/js/profile.js"></script>
+    <title>Progressive User Profile</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/profile.css">
 </head>
-
 <body>
-    <div class="site" id="page">
-        <div class="container">
-            <div class="form-box">
-                <div class="progress">
-                    <div class="logo"><a href="/">SAVE THE <span>REEFS</span></a></div>
-                        <ul class="progress-steps">
-                            <li class="step active">
-                                <span>1</span><p>Personal Information&nbsp;&nbsp;&nbsp;  </p>
-                            </li>
-                            <li class="step">
-                                <span>2</span><p>Security Information&nbsp;&nbsp;&nbsp;&nbsp;  </p>
-                            </li>
-                            <li class="step">
-                                <span>3</span><p>Contact Information&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p>
-                            </li>
-                            <li class="step">
-                                <span>4</span><p>Additional Information</p>
-                            </li>
-                        </ul>
-                    </div>      
-                    <form>
-                        <div class="form-one form-step active">
-                            <div class="background-svg"></div>
-                                <h2>Tell Us About Yourself</h2>
-                                <p>Join Our Mission to Protect Marine Life!</p>
-                                <div>
-                                    <label>First Name</label>
-                                    <input type="text" placeholder="e.g. John">
-                                </div>
-                                <div>
-                                    <label>Last Name</label>
-                                    <input type="text" placeholder="e.g. Paul">
-                                </div>
-                                <div class="birth">
-                                    <label>Date of Birth</label>
-                                    <div class="grouping">
-                                        <input type="text" pattern="[0-9]*" name="day" value="" min="0" max="31" placeholder="DD">
-                                        <input type="text" pattern="[0-9]*" name="month" value="" min="0" max="12" placeholder="MM">
-                                        <input type="text" pattern="[0-9]*" name="year" value="" min="0" max="2024" placeholder="YYYY">
-                                    </div>
-              
-                                </div>
-                                <div>
-                                    <label>Gender</label>
-                                    <select id="Gender" name="Gender">
-                                        <option value="" selected disabled>Select</option>
-                                        <option value="Male">Male</option>
-                                        <option value="Female">Female</option>
-                                        <option value="Non-binary">Non-binary</option>
-                                        <option value="Prefer not to say">Prefer not to say</option>
-                                    </select>
-                                </div>
-                            
-                        </div>
-                        <div class="form-two form-step">
-                            <div class="background-svg"></div>
-                            <h2>Secure Your Account</h2>
-                            <div>
-                                <label>Email</label>
-                                <input type="email" placeholder="Email">
-                            </div>
-                            <div>
-                                <label>Password</label>
-                                <input type="password" placeholder="Password">
-                            </div>
-                            <div>
-                                <input type="password" placeholder="Confirm password">
-                            </div>
-                        </div>
-                        <div class="form-three form-step">
-                            <div class="background-svg"></div>
-                                <h2>Contact Information</h2>
-                                <div>
-                                    <label>Phone Number</label>
-                                    <input type="tel" placeholder="+94xxxxxxxxxx">
-                                </div>
-                                <div>
-                                    <label>Country</label>
-                                    <input type="text" placeholder="Street Address">
-                                </div>
-                                <div>
-                                    <label>City</label>
-                                    <input type="text" placeholder="City">
-                                </div>
-                                <div>
-                                    <label>Zip Code</label>
-                                    <input type="text" placeholder="Postal/Zip Code">
-                                </div>
-                            
-                        </div>
-                        <div class="form-four form-step">
-                            <div class="background-svg"></div>
-                                <h2>Complete Your Profile</h2>
-                                <div>
-                                    <label>Top marine conservation interest?</label>
-                                    <input type="text" placeholder="e.g. Coral reefs, sea turtles">
-                                </div>
-                                <div class="select">
-                                    <label>Interested in volunteering?</label>
-                                    <select id="volunteering" name="volunteering">
-                                        <option value="" selected disabled>Select</option>
-                                        <option value="Yes">Yes</option>
-                                        <option value="No">No</option>
-                                    </select>
-                                </div>
-                                <div class="select">
-                                    <label>Interested in donating to our cause? </label>
-                                    <select id="donations" name="donations">
-                                        <option value="" selected disabled>Select</option>
-                                        <option value="Yes">Yes</option>
-                                        <option value="No">No</option>
-                                    </select>
-                                </div>
-                                <div class="checkbox">
-                                    <input type="checkbox">
-                                    <label>I wish to recieve the monthly news letters </label>
-                                </div>
-                            </div>
-                            <div class="button-group">
-                                <button type="button" class="btn-back" disabled>Back</button>
-                                <button type="button" class="btn-next" >Next Step</button>
-                                <button type="button" class="btn-submit" >Submit</button>
-                            </div>
-                    </form>
-            </div>      
+    <!-- Header -->
+    <header>
+        <div>
+          <img
+            src="src/images/global/logo.png"
+            alt="logo.png - Asiyah Zaheeem"
+            id="logo"
+          />
+        </div>
+        <nav>
+          <ul>
+            <li><a href="home.html" >Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+          </ul>
+        </nav>
+        <div class="nav_profile_container active ">
+          <div class="nav_profile" onclick="window.location.href='profile.html'">
+            <span >Profile</span>
+            <i id="profile_logo"></i>
+          </div>
+        </div>
+      </header>
+    <div class="container">
+        <div class="progress-bar">
+            <div class="progress"></div>
+            <div class="progress-text" id="progress-text"></div>
+        </div>
+        <div class="profile-output" id="profile-output">
+            <h2>User Profile</h2>
+            <div id="profile-content"></div>
+        </div>
+        <div class="prompt-container" id="prompt-container">
+            <button id="startButton" onclick="startPrompts()">Start Profile Creation</button>
         </div>
     </div>
-       
+    <script src="src/js/profile.js"></script>
 </body>
 </html>
