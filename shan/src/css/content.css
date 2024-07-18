@@ -163,3 +163,23 @@ main > div > div {
   width: 250px;
   height: 200px;
 }
+
+
+#back_to_top {
+    text-align: center;
+    font-size: 1.2em;
+  }
+  
+  #back_to_top a {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    text-decoration: none; /* Remove underline from the link */
+    color: var(--black);
+  }
+  
+  #back_to_top img {
+    width: 48px;
+    height: 48px;
+    margin-bottom: -15px;
+  }
