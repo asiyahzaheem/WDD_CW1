@@ -1,0 +1,127 @@
+
+* {
+    padding: 0 ;
+    margin: 0 ;
+    box-sizing: content-box ;
+ }
+ 
+
+body {
+    font-family: 'Nunito', Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+
+
+.main-topic {
+    background-color: #aad8e6;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 2px solid #1a5276; /* Dark blue */
+    margin-top: 100px;
+}
+
+.main-topic h1 {
+    color: #1a5276; /* Dark blue */
+    margin: 0;
+    font-size: 2.5em;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #1a5276; /* Dark blue */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.topics-covered {
+    background-color: #eaf2f1; /* Light teal */
+    padding: 15px;
+    border: 2px solid #2980b9; /* Dark teal */
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.topics-covered h2 {
+    color: #2980b9; /* Dark teal */
+    font-size: 1.5em;
+    margin-top: 0;
+}
+
+.topics-covered ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.topics-covered ul li {
+    color: #2980b9; /* Dark teal */
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.topic {
+    margin-bottom: 30px;
+}
+
+.topic h2 {
+    color: #2980b9; /* Dark teal */
+    font-size: 1.5em;
+    margin-top: 0;
+}
+
+.content-container {
+    background-color: #e0f2f1; /* Light teal */
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #2980b9; /* Dark teal */
+}
+
+.content-container h2 {
+    color: #2980b9; /* Dark teal */
+    font-size: 1.5em;
+    margin-top: 0;
+}
+
+.content-container p {
+    color: #333;
+}
+
+.topic-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+/* Existing styles are assumed to be included */
+
+.back-to-top {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-to-top a {
+    text-decoration: none;
+    color: #1a5276; /* Dark blue */
+    font-weight: 600;
+    padding: 10px 20px;
+    background-color: #aad8e6; /* Light blue */
+    border: 2px solid #1a5276; /* Dark blue */
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+    display: inline-block; /* Ensures it behaves like a block element */
+}
+
+.back-to-top a:hover {
+    background-color: #1a5276; /* Dark blue */
+    color: #fff;
+}
+
