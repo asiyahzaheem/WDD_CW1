@@ -19,12 +19,12 @@ main {
   display: flex;
   flex-direction: column;
   color: var(--black);
-  gap: 64px;
+  gap: 32px;
 }
 
 hr {
   border: 2px solid var(--black);
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   border-radius: 24px;
 }
@@ -45,7 +45,28 @@ main p {
   width: 90%;
 }
 
-#section-1 h1 {
+main > div {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+main > div > div {
+  border-radius: 24px;
+  padding: 24px;
+}
+
+.topic {
+  flex-direction: column;
+  text-align: center;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}
+
+#section-1 {
+  background-color: var(--teal);
+}
+
+#section-1 h2 {
   text-align: center;
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
   margin-bottom: 24px;
@@ -58,11 +79,13 @@ main p {
 }
 
 #s1-div1 ul {
+  margin-top: 24px;
   list-style-type: disc; /* or circle, square, etc. */
   padding-left: 20px; /* Add some padding */
 }
 
 #s1-div1 li {
+  font-size: large;
   margin: 5px 0; /* Add margin between list items */
 }
 
@@ -70,10 +93,73 @@ main p {
   margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
-  width: 400px;
-  font-size: var(--text-m);
+  width: 320px;
+  font-size: var(--text-s);
+  text-align: center;
+  font-weight: var(--weight-b);
 }
 
-#s1-div2 ul {
-  list-style-type: none;
+#s1-div2 li {
+  margin: 5px 0; /* Add margin between list items */
+}
+
+#s1-div2 li a:link {
+  text-decoration: none;
+  color: var(--black);
+}
+
+#s1-div2 li a:hover {
+  color: var(--black);
+}
+
+#s1-div2 li a:visited {
+  size: 1.2em;
+  color: var(--black);
+}
+
+#section-2 {
+  background-color: var(--lightBlue);
+}
+
+#section-2,
+#section-3,
+#section-4,
+#section-5 {
+  background-color: var(--lightBlue); /* Or any color you prefer */
+  padding: 24px;
+}
+
+#section-2 p,
+#section-3 p,
+#section-4 p,
+#section-5 p {
+  font-size: 1.1em;
+  line-height: 1.6em;
+  margin-top: 16px;
+}
+
+#image-1 {
+  background-image: url("../images/content_student-2/topic1.jpg");
+}
+
+#image-2 {
+  background-image: url("../images/content_student-2/topic2.jpg");
+}
+
+#image-3 {
+  background-image: url("../images/content_student-2/topic3.jpg");
+}
+
+#image-4 {
+  background-image: url("../images/content_student-2/topic4.jpg");
+}
+
+#image-1,
+#image-2,
+#image-3,
+#image-4 {
+  background-size: cover;
+  background-position: center;
+  width: 250px;
+  height: 200px;
 }
