@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
+* {
+    padding: 0 ;
+    margin: 0 ;
+    box-sizing: content-box ;
+ }
+
+
+body {
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    background:var(--white);
+    margin: 0;
+    padding-bottom: 80px; /* Make space for the footer */
+}
+
+
+h1, h2 {
+    margin: 20px 0;
+}
+
+h1 {
+    margin: 150px 0 0 0;
+    font-weight: bolder;
+    font-size: 2.5em; /* Make h1 larger */
+    color: #333; /* Add color to make it stand out */
+    background-color: #5ed8e3fe;
+}
+
+h2 {
+    font-weight: normal;
+    font-size: 1.5em; /* Make h2 smaller than h1 */
+    color: #666; /* Add a lighter color for h2 */
+}
+
+.profilePics {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.profile {
+    position: relative;
+    width: 250px;
+    padding-top: 40px; /* Adjust padding for the image */
+}
+
+.profile img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.profile:hover img {
+    transform: scale(1.1);
+    opacity: 0.5;
+    border-radius: 10px 10px 0 0;
+}
+
+.details {
+    transform: translateX(-10px);
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.profile:hover .details {
+    opacity: 1;
+    max-height: 150px; /* Adjust based on content */
+}
+
+.details h3 {
+    margin: 0 0 0 10px;
+}
+
+.details p {
+    margin: 5px 0;
+}
+
