@@ -116,12 +116,21 @@ a {
 }
 
 .link-top {
+    z-index: 9999;
     display: flex;
     justify-content: center;
     font-size: var(--text-m);
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    color: var(--darkTeal-1);
+    background-color: var(--teal-0);
+    padding: 18px 32px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px;
 }
 
 .link-top:hover {
     transition: all 0.3s;
-    color: var(--black-0);
+    color: var(--teal-1);
 }
