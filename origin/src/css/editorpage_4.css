@@ -4,6 +4,10 @@ h1 {
     text-align: center;
 }
 
+main {
+    max-width: 100%;
+}
+
 .details {
     text-align: center;
 }
