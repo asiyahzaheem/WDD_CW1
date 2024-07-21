@@ -14,9 +14,9 @@ const pages = [
     { id: 'groupId12', url: '/venuja/contentpage_3.html' },
     { id: 'groupId13', url: 'contentpage_4.html' },
 
-    { id: 'groupId14', url: '/asiyah/editorpage_1.html' },
+    { id: 'groupId14', url: '/asiyah/pageEditor_1.html' },
     { id: 'groupId15', url: '/shan/editorpage_2.html' },
-    { id: 'groupId16', url: '/venuja/editorpage_3.html' },
+    { id: 'groupId16', url: '/venuja/pageEditor.html' },
     { id: 'groupId17', url: 'editorpage_4.html' },
 
 ];
