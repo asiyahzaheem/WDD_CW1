@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+:root {
+    
+    --black : #1c1c1c;
+    --black-0 : #bbbbbb;
+    --black-1 : #494949;
+
+    --white : #f5f5f5;
+    --white-0 : #fafafa;
+    --white-1 : #ccc;
+
+    
+    
+    --lightBlue : #bbe9ff;
+    --lightBlue-0 : #e4f6ff;
+    --lightBlue-1 : #a8d0e6;
+
+    --teal : #91ddcf;
+    --teal-0 : #d3f1ec;
+    --teal-1 : #81c4b8;
+
+    --orange : #ef9c66;
+    --orange-0 : #fae1d1;
+    --orange-1 : #d48756;
+
+    --darkTeal : #78aba8;
+    --darkTeal-0 : #d7efe5;
+    --darkTeal-1 : #65918e;
+    
+    --heading-1: 62px; 
+    --heading-2: 44px; 
+    --heading-3: 30px; 
+
+    --text-xs: 10px; 
+    --text-s: 12px; 
+    --text-m: 16px; 
+    --text-l: 20px; 
+
+   --lineH: 1; 
+   --lineH-s: 1.05; 
+   --lineH-p: 1.6; 
+
+   --weight: 400; 
+   --weight-m: 500; 
+   --weight-sb: 600; 
+   --weight-b: 700; 
+}
+
+* {
+    padding: 0 ;
+    margin: 0 ;
+    box-sizing: border-box ;
+}
+
+
+body {
+    font-family: "Nunito", Helvetica, sans-serif;
+    background-color: var(--white);
+}
+
+main {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+/* --------------------------------- */
+/* ------------- NAVIGATION ------------- */
+/* --------------------------------- */
+
+header {
+    font-size: 100%;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    
+    top: 0; 
+    z-index: 5; 
+    padding: 12px 0;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    align-items: center;
+  }
+  
+  header div {
+    margin: 0 calc(0.5rem + 5%); 
+    width: 100px;
+    height: 60px;
+  }
+  
+  header #logo{
+    height: 60px;
+  }
+  
+  
+  header nav {
+    width: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+  
+  header nav::-webkit-scrollbar {
+    display: none; 
+  }
+  
+  header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 18px 0;
+    display: flex;
+    gap: 40px;
+  }
+  
+  header nav li {
+    display: inline;
+    background-color: var(--white);
+  }
+  
+  header nav a {
+    color: var(--black);
+    font-size: 1.25em;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    padding: 15px;
+  }
+  
+  header nav a:hover {
+    color: #00aeef;
+    background-color: #e3e3e3;
+    transition: ease-in-out 0.3s;
+  }
+  
+  header nav a.active {
+    position: relative; 
+    color: #00aeef;
+  }
+  
+  .nav_profile_container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  
+  .nav_profile {
+    height: 60%;
+    width: 100%;
+    margin: 0;
+    border: solid 2px #1c1c1c;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+    font-weight: 600;
+    justify-content: space-evenly;
+    transition: transform 0.3s ease-in-out
+  }
+  
+  .nav_profile:hover{
+    border: solid 2px #00aeef;  
+    color: #00aeef;
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: ease-in-out 0.3s;
+  }
+  
+  #profile_logo{
+    background-image: url("../images/global/user-profile-icon.svg");
+    background-size: cover;
+    width: 28px;
+    height: 28px;
+  }
+  
+/* --------------------------------- */
+/* ------------- FOOTER ------------- */
+/* --------------------------------- */
+  
+  .footer {
+    background-color: var(--black);
+    height: 200px;
+    width: 100%;
+    color: var(--white);
+    margin-top: 24px;
+    text-align: center;
+  }
+  
+  .footer_content {
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    padding: 12px 0;
+  }
+  
+  .footer_content div{
+    transform: translateX(-36px);
+  }
+  
+  .footer hr {
+    border: 1px solid var(--white);
+    margin: 10px auto;
+    border-radius: 24px;
+  }
+  
+  .footer a {
+    color: var(--white); 
+    text-decoration: none;
+    padding: 10px 0;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }

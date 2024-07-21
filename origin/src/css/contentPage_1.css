@@ -1,0 +1,136 @@
+.container {
+    padding: 4.8rem 0;
+}
+
+.nav_profile {
+    height: 40px;
+    width: 120px;
+}
+
+h1 {
+    font-size: var(--heading-3) ;
+}
+
+main {
+    margin-top: 2.4rem;
+}
+.content-page-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.6rem;
+
+    margin-bottom: 2.4rem;
+}
+
+.content-page-header nav {
+    display: flex;
+    align-items: center;
+    gap: 2.4rem;
+
+}
+
+a {
+    color: var(--black);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.content-page-header nav a {
+    padding: 0.4rem 1rem;
+    color: var(--darkTeal-1);
+    font-size: 1.4rem;
+}
+
+.content-page-header nav a:hover {
+    transition: 0.3s all ease-in;
+    color: var(--darkTeal);
+    border-bottom: 1px solid var(--darkTeal) ;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+
+    margin-bottom: 3.2rem;
+}
+
+.story {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+    column-gap: 2.4rem;
+
+    border-radius: 12px;
+    border: 2px solid var(--black);
+    padding: 1.2rem;
+}
+
+#brazil, #uk {
+    background-color: var(--teal-0);
+    border-color: var(--teal-1);
+}
+
+#palestine, #italy {
+    background-color: var(--orange-0);
+    border-color: var(--orange-1);
+}
+.story-header {
+    grid-column: 1/-1;
+
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1.6rem;
+}
+
+.story-header span {
+    font-size: var(--text-l);
+    font-weight: 500;
+}
+
+.description p{
+    margin-bottom: 0.4rem;
+}
+
+.description a {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+
+    font-weight: 600;
+    color: var(--black-1);
+    font-style: italic;
+
+    margin-top: 1.2rem;
+}
+
+.story-image {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+}
+.story-image img {
+    max-width: 70%;
+    border-radius: 5px;
+}
+
+.link-top {
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    font-size: var(--text-m);
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    color: var(--darkTeal-1);
+    background-color: var(--teal-0);
+    padding: 18px 32px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px;
+}
+
+.link-top:hover {
+    transition: all 0.3s;
+    color: var(--teal-1);
+}

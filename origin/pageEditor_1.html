@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="src/css/style.css" type="text/css"/>
+        <title>Student 01 | Page Editor</title>
+
+        <style>
+            :root {
+                --vanilla: #f1e9dc;
+                --honey: #F2DBA7;
+                --sapphire: #B7CFFF;
+                --apricot: #FFB28C;
+                --coral: #EF7373;
+            }
+            
+            * {
+                margin: 0;
+                padding: 0 ;
+                box-sizing: border-box;
+            }
+
+            
+            body {
+                background-image: url('src/images/page_editor/backgroundImg.png');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                font-family: "Poppins", Helvetica, sans-serif !important;
+                color: var(--black);
+            }
+            
+            a {
+                text-decoration: none;
+            }
+            
+            .container {
+                max-width: 90%;
+                margin: 0 auto;
+            }
+            
+            .header {
+                padding: 48px 0; 
+            }
+            
+            .header .title {
+                font-family: "Cormorant Garamond", Helvetica, sans-serif;
+                font-size: 128px; 
+                font-weight: 300;
+            }
+            
+            .subtitle {
+                font-size: 24px; 
+                font-weight: 500;
+            }
+            
+            .role {
+                font-size: 20px; 
+                text-transform: uppercase;
+                font-weight: 600;
+                letter-spacing: 2px;
+            }
+            
+            .recent {
+                max-width: fit-content;
+                margin-left: auto;
+                font-size: 52px;
+                font-weight: 500;
+                letter-spacing: 5px;
+                text-transform: uppercase;
+                line-height: 0.72;
+                margin-bottom: 32px;
+            }
+            
+            .work {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                margin-bottom: 32px;
+            }
+            
+            .work-item {
+                display: flex;
+                align-items: start;
+                justify-content: space-between;
+                padding: 8px 0;
+            }
+            
+            hr {
+                color: var(--black);
+                background-color: var(--black);
+                height: 2px;
+                border-width: 0;
+                margin: 8px 0;
+            }
+            
+            .work-item .arrowImg {
+                width: 20px;
+            }
+            
+            .work-item .title {
+                max-width: 30%;
+            }
+            
+            .work-item .title a {
+                height: 20px;
+            }
+            
+            .work-item .title span {
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                font-size: var(--text-l);
+                color: var(--black);
+            }
+            
+            .work-item .content {
+                display: flex;
+                justify-content: flex-end;
+                max-width: 50% !important;
+                gap: 32px;
+            }
+            
+            .work-item .image {
+                max-width: 40%;
+            }
+            
+            .work-item .work-image {
+                max-width: 100%;
+            }
+            
+            .work-item .description {
+                max-width: 40%;
+                font-size: var(--text-s);
+            }
+            
+        </style>
+
+    </head>
+
+    <body>
+        <main class="container">
+            <div class="header">
+                <p class="role">Student Role: 01</p>
+                <p class="title">Hi, I'm Asiyah.</p>
+                <p class="subtitle">here is my work!</p>
+            </div>
+
+            <p class="recent">Recent<br>Work.</p>
+            <div class="work">
+                <hr>
+                <div class="work-item">
+                    <div class="title">
+                        <a href="splash.html" target="_blank">
+                            <span>Save the reefs splash screen</span>
+                            <img class="arrowImg" src="src/images/page_editor/up-right-arrow.png" alt="Icon of arrow pointing top-right"/>
+                        </a>
+                    </div>
+                    <div class="content">
+                        <div class="image">
+                            <img class="work-image" src="src/images/page_editor/work_item_2.png" alt="Splash Screen"/>
+                        </div>
+                        <div class="description">
+                            <p>Created a splash screen that encapsulates the brand and style of our organization - clean, minimal and blue. The screen fades away in 4 seconds, redirecting the user to the Home page.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="work-item">
+                    <div class="title">
+                        <a href="shop.html" target="_blank">
+                            <span>Shop - Product Showcase</span>
+                            <img class="arrowImg" src="src/images/page_editor/up-right-arrow.png" alt="Icon of arrow pointing top-right"/>
+                        </a>
+                    </div>
+                    <div class="content">
+                        <div class="image">
+                            <img class="work-image" src="src/images/page_editor/work_item_1.png" alt="Shop Product Showcase"/>
+                        </div>
+                        <div class="description">
+                            <p>Developed the shop that sells apparel and accessories to fundraise for aquatic conservation.<br>Utilized Javascript event listeners, as well as auto-generated CSS to accomplish this. Used a JSON file to store product data.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="work-item">
+                    <div class="title">
+                        <a href="shop.html" target="_blank">
+                            <span>Shop - Product Cart</span>
+                            <img class="arrowImg" src="src/images/page_editor/up-right-arrow.png" alt="Icon of arrow pointing top-right"/>
+                        </a>
+                    </div>
+                    <div class="content">
+                        <div class="image">
+                            <img class="work-image" src="src/images/page_editor/work_item_3.png" alt="Shop Product Cart (Bucket)"/>
+                        </div>
+                        <div class="description">
+                            <p>Created the shop cart as a sidebar panel that opens when a user adds a product to their cart. Cart data is stored in Local Storage. The functionality of adding, removing, selecting and changing the qty of a product are implemented.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="work-item">
+                    <div class="title">
+                        <a href="shop.html" target="_blank">
+                            <span>Shop - Checkout Summary</span>
+                            <img class="arrowImg" src="src/images/page_editor/up-right-arrow.png" alt="Icon of arrow pointing top-right"/>
+                        </a>
+                    </div>
+                    <div class="content">
+                        <div class="image">
+                            <img class="work-image" src="src/images/page_editor/work_item_4.png" alt="Shop Checkout Summary"/>
+                        </div>
+                        <div class="description">
+                            <p>Developed the checkout page that allows the user to enter their personal details, contact information and shipping details. A summary of their cart, items and amounts, is also showcased.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="work-item">
+                    <div class="title">
+                        <a href="splash.html" target="_blank">
+                            <span>Save the Reefs Logo</span>
+                            <img class="arrowImg" src="src/images/page_editor/up-right-arrow.png" alt="Icon of arrow pointing top-right"/>
+                        </a>
+                    </div>
+                    <div class="content">
+                        <div class="image">
+                            <img class="work-image" src="src/images/page_editor/work_item_5.png" alt="Logo of our organization depicting a whale"/>
+                        </div>
+                        <div class="description">
+                            <p>Designed and illustrated a logo  on Sketchbook, depicting our whale mascot, Reefie!</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer_content">
+            <div>
+                <h3>Contact Us</h3>
+                <hr />
+                <address>Email : <a href="mailto:asiyah.20233158@iit.ac.lk">asiyah.20233158@iit.ac.lk</a></address>
+            </div>
+            <div>
+                <h3>Main Links</h3>
+                <hr />
+                <a href="splash.html">Splash Screen</a><br />
+                <a href="shop.html">Shop</a><br />
+            </div>
+            <div>
+                <h3>Other Links</h3>
+                <hr />
+                <a href="contentpage_1.html">Content Page</a><br>
+                <a href="pageeditor_1.html">Editor page</a><br>
+                <a href="https://github.com/asiyahzaheem/WDD_CW1.git"
+                >GitHub Repository</a
+            >
+            </div>
+            </div>
+        </footer>
+    </body>
+</html>
