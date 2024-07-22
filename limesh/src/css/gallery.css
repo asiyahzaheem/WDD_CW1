@@ -1,9 +1,9 @@
 /*----------Main----------*/
 
 main {
-    margin: 60px 0 0 0;
+    margin: 60px 0 0 0; /* Ensures main section is at top of page */
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
     justify-content: space-between;
     gap: 24px;
     color: #1c1c1c;
@@ -26,7 +26,7 @@ main {
 .grid {
     display: grid;
     gap: 20px;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjusted grid-template-columns */
 }
 
 .photo img {
@@ -34,11 +34,11 @@ main {
     height: 300px; /* Fixed height */
     border-radius: 5px;
     object-fit: cover;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease; 
 }
 
 .photo img:hover {
-    transform: scale(1.05);
+    transform: scale(1.05); 
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
     cursor: pointer;
 }
@@ -55,7 +55,7 @@ main {
     display: none; /* Hide the preview by default */
     align-items: center;
     justify-content: center;
-    z-index: 1000;
+    z-index: 1000; /* z-index set to 1000 to ensure it's on top of other elements */
     padding-bottom: 4rem; /* Added padding-bottom */
 }
 
@@ -93,7 +93,7 @@ main {
 }
 
 .image-preview-container .preview .description {
-    display: flex;
+    display: flex; 
     flex-direction: column;
     width: 40%; /* Limit width to the remaining 40% */
     float: right;
@@ -131,5 +131,5 @@ main {
 .image-preview-container .preview .description .customization select {
     width: 100%;
     padding: 0.5rem;
-    margin-bottom: -1rem;
+    margin-bottom: -1rem; 
 }

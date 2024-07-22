@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/css/style.css" />
+    <link rel="stylesheet" href="src/css/feedback.css" />
+    <title>Feedback Form</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div>
+        <img src="src/images/global/logo.png" alt="logo.png" id="logo" />
+      </div>
+      <nav>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="feedback.html" class="active">Feedback</a></li>
+        </ul>
+      </nav>
+      <div class="nav_profile_container">
+        <div class="nav_profile" onclick="window.location.href='profile.html'">
+          <span>Profile</span>
+          <i id="profile_logo"></i>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main class="s_cont_margin">
+      <h1>SEND US YOUR FEEDBACK</h1>
+      <form id="feedbackForm" method="post">
+        <!-- name -->
+        <label for="name"
+          >Enter Your Full Name <span class="required">*</span></label
+        >
+        <input type="text" name="name" id="name" required />
+        <!-- email -->
+        <label for="email"
+          >Enter Your Email Address <span class="required">*</span></label
+        >
+        <input type="text" name="email" id="email" required />
+        <!-- Visit status -->
+        <label
+          >Was this the first time visiting this website?
+          <span class="required">*</span></label
+        >
+        <div>
+          <input type="radio" name="visit" id="yes" />
+          <label for="yes">YES</label><br />
+          <input type="radio" name="visit" id="no" />
+          <label for="no">NO</label>
+        </div>
+        <!-- Visit reason -->
+        <label for="visit_reason"
+          >What is your <b>PRIMARY</b> reason to visit this website?
+          (optional)</label
+        >
+        <textarea name="visit_reason" id="visit_reason" rows="4"></textarea>
+        <!-- rating -->
+        <label
+          >How satisfied are you with our website?
+          <span class="required">*</span></label
+        >
+        <div class="rating-conatiner">
+          <div class="rating-scale">
+            <input type="radio" id="rate1" name="rating" value="1" />
+            <label for="rate1">1</label>
+            <input type="radio" id="rate2" name="rating" value="2" />
+            <label for="rate2">2</label>
+            <input type="radio" id="rate3" name="rating" value="3" />
+            <label for="rate3">3</label>
+            <input type="radio" id="rate4" name="rating" value="4" />
+            <label for="rate4">4</label>
+            <input type="radio" id="rate5" name="rating" value="5" />
+            <label for="rate5">5</label>
+            <input type="radio" id="rate6" name="rating" value="6" />
+            <label for="rate6">6</label>
+            <input type="radio" id="rate7" name="rating" value="7" />
+            <label for="rate7">7</label>
+            <input type="radio" id="rate8" name="rating" value="8" />
+            <label for="rate8">8</label>
+            <input type="radio" id="rate9" name="rating" value="9" />
+            <label for="rate9">9</label>
+            <input type="radio" id="rate10" name="rating" value="10" />
+            <label for="rate10" id="rate10">10</label>
+          </div>
+          <div id="rating-level">
+            <span>Not Likely</span><span>Very Likely</span>
+          </div>
+        </div>
+        <!-- additional questions -->
+        <label for="questions"
+          >Do you have any additional questions or requests? (optional)</label
+        >
+        <textarea name="questions" id="questions" rows="4"></textarea>
+        <div class="button-area">
+          <button type="button" onclick="previewClick()">SUBMIT</button>
+          <button type="reset">CLEAR</button>
+        </div>
+      </form>
+    </main>
+    <!-- Preview Modal -->
+    <div id="previewModal" style="display: none">
+      <div class="modal-content">
+        <h2>Preview Your Feedback</h2>
+        <p id="previewContent"></p>
+        <button onclick="closeModal()">Edit</button>
+        <button onclick="submitForm()">Send</button>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer_content">
+        <div>
+          <h3>Contact Us</h3>
+          <hr />
+          <a href="mailto:shan.20233126@iit.ac.lk">shan.20233126@iit.ac.lk</a>
+          <p><a href="tel:+94770098507">+94 77 00 98 507</a></p>
+        </div>
+        <div>
+          <h3>Main Links</h3>
+          <hr />
+          <a href="sitemap.html">Sitemap</a><br />
+        </div>
+        <div>
+          <h3>Other Links</h3>
+          <hr />
+          <a href="editorpage_2.html">Editor page</a><br />
+          <a href="https://github.com/asiyahzaheem/WDD_CW1.git">GitHub Repository</a>
+        </div>
+      </div>
+    </footer>
+    <script src="src/js/feedback.js"></script>
+  </body>
+</html>

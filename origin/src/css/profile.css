@@ -1,0 +1,71 @@
+* {
+   padding: 0 ;
+   margin: 0 ;
+   box-sizing: content-box ;
+}
+
+.active {
+   color: #00aeef;
+   transition: ease-in-out 0.3s;
+ }
+ 
+
+body {
+   font-family: Arial, sans-serif;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   background: url('../images/waves.png') no-repeat bottom  fixed;
+}
+
+.container {
+   width: 50%;
+   background: var(--white);
+   padding: 20px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   border-radius: 10px;
+}
+
+.progress-bar {
+   width: 100%;
+   background-color: #e0e0e0;
+   border-radius: 5px;
+   overflow: hidden;
+   margin-bottom: 20px;
+   position: relative;
+   height: 30px;
+}
+
+.progress {
+   width: 0;
+   background-color: #76c7c0;
+   height: 30px;
+}
+
+.progress-text {
+   position: absolute;
+   width: 100%;
+   text-align: center;
+   top: 0;
+   left: 0;
+   color: #000;
+   font-size: 15px;
+   padding: 5px 0 0 0;
+}
+
+.prompt-container {
+   margin-bottom: 20px;
+}
+
+.profile-output {
+   margin-top: 20px;
+}
+
+.profile-output h2 {
+   margin-bottom: 10px;
+}
+
+.profile-output div {
+   margin-bottom: 5px;
+}

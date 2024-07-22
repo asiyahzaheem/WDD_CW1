@@ -1,0 +1,94 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: content-box; /* Overwrite box sizing in global css*/
+  }
+  
+body {
+    background-color: var(--white);
+    font-family: "Nunito", Arial, Helvetica, sans-serif;
+    position: relative;
+  }
+  
+  /*----------Main----------*/
+  
+  main {
+    margin: 84px 0 0 0; /* Top margin set to 60px to stop from going under the nav bar */
+    max-width: 100%; /*Overwrite max width in global css*/
+    display: flex;
+    flex-direction: column;
+    color: var(--black);
+    gap: 32px;
+    text-align: center;
+  }
+  
+  hr {
+    border: 2px solid var(--black);
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 24px;
+  }
+  
+  main h1 {
+    font-weight: 900;
+  }
+  
+  main p {
+    font-size: 1.1em;
+    line-height: 1.5em;
+    text-align: center;
+  }
+  
+  /*Content margin*/
+  .s_cont_margin {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
+
+  #heading{
+    font-family: "Montserrat  ", Arial, Helvetica, sans-serif;
+    text-align: center;
+  }
+
+  .bg_color-1{
+    background-color: var(--orange);
+  }
+
+  .bg_color-2{
+    background-color: var(--lightBlue);
+  }
+
+  h2{
+    font-size: 26px;
+    text-decoration: underline var(--black);
+    margin: 10px 0;
+  }
+
+ main h3{
+    font-size: 24px;
+    margin: 10px 0;
+  }
+
+  main b{
+    margin: 10px 0;
+  }
+
+  #back_to_top {
+    text-align: center;
+    font-size: 1.2em;
+  }
+  
+  #back_to_top a {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    text-decoration: none; /* Remove underline from the link */
+    color: var(--black);
+  }
+  
+  #back_to_top img {
+    width: 48px;
+    height: 48px;
+    margin-bottom: -15px;
+  }
