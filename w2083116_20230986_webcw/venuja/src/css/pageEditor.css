@@ -1,0 +1,89 @@
+* {
+    padding: 0 ;
+    margin: 0 ;
+    box-sizing: content-box ;
+ }
+
+
+body {
+    font-family: 'Nunito', Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    color: #333;
+    text-align: center; /* Center content */
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #1a5276; /* Dark blue */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.title h1 {
+    margin: 0;
+    font-size: 2em;
+    color: #1a5276; /* Dark blue */
+    margin-top: 100px;
+}
+
+.title p {
+    font-size: 1.2em;
+    color: #1a5276; /* Dark blue */
+    margin: 5px 0;
+}
+
+.introduction {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.introduction a {
+    text-decoration: none;
+    color: #1a5276; /* Dark blue */
+    font-weight: 600;
+    padding: 5px 10px; /* Reduced padding to make button smaller */
+    background-color: #aad8e6; /* Light blue */
+    border: 2px solid #1a5276; /* Dark blue */
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+    display: inline-block; /* Ensures it behaves like a block element */
+}
+
+.introduction a:hover {
+    background-color: #1a5276; /* Dark blue */
+    color: #fff;
+}
+
+.web-page {
+    margin-bottom: 30px;
+}
+
+.web-page h2 {
+    color: #1a5276; /* Dark blue */
+    font-size: 1.8em;
+    margin-top: 0;
+}
+
+.web-page p {
+    color: #333;
+}
+
+.web-page a {
+    color: #2980b9; /* Teal */
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.web-page a:hover {
+    text-decoration: underline;
+}
+
+#bottom {
+    height: 20px;
+}
